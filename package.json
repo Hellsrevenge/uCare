@@ -592,6 +592,7 @@
     "mixin-object": "^2.0.1",
     "mkdirp": "^0.5.1",
     "mongoose": "^5.4.8",
+    "mongoose-seed": "^0.5.1",
     "move-concurrently": "^1.0.1",
     "ms": "^2.0.0",
     "multicast-dns": "^6.2.3",
