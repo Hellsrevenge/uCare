@@ -8,8 +8,7 @@ import PatientProfile from "./pages/PatientProfile";
 import NewAppt from "./pages/NewAppt";
 import PatientFile from "./pages/PatientFile";
 import Search from "./pages/Search";
-import Footer from "./components/Footer";
-import './App.css';
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
