@@ -1,15 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
-import SignUp from "./pages/SignUp";
-import DoctorProfile from "./pages/DoctorProfile";
-import PatientList from "./pages/PatientList";
-import PatientProfile from "./pages/PatientProfile";
-import NewAppt from "./pages/NewAppt";
-import PatientFile from "./pages/PatientFile";
-import Search from "./pages/Search";
+import Home from "./pages/Home/Home";
+import SignUp from "./pages/SignUp/SignUp";
+import DoctorProfile from "./pages/DoctorProfile/DoctorProfile";
+import PatientList from "./pages/PatientList/PatientList";
+import PatientProfile from "./pages/PatientProfile/PatientProfile";
+import NewAppt from "./pages/NewAppt/NewAppt";
+import PatientFile from "./pages/PatientFile/PatientFile";
+import Search from "./pages/SearchResults/SearchResults";
 import Footer from "./components/Footer/Footer";
-
 
 function App() {
   return (

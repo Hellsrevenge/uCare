@@ -17,4 +17,4 @@ function NavHome() {
   };
 
 
-export default navHome;
+export default NavHome;

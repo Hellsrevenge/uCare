@@ -1,9 +1,7 @@
-import React from "react";
-import { Col, Row, Container } from "../components/Grid";
-import NavHome from "./components/NavHome";
-import Form from "./components/Form";
-
-
+import React, { Component} from "react";
+import { Col, Row, Container } from "../../components/Grid";
+import NavHome from "../../components/NavHome/NavHome";
+import Form from "../../components/FormLogin/FormLogin";
 
 class Home extends Component {
   state = {
