@@ -31,9 +31,7 @@ class Form extends Component {
       alert(
         `Please choose a more secure password`
       );
-    } else {
-      alert(`Hello`);
-    }
+    } 
 
     this.setState({
       email: "",
@@ -42,13 +40,11 @@ class Form extends Component {
   };
 
   render() {
-    // Notice how each input has a `value`, `name`, and `onChange` prop
+
     return (
       <div>
-        <p>
-          Hello {this.state.firstName} {this.state.lastName}
-        </p>
-        <form className="form">
+
+         <form className="form-inline">
           <input
             value={this.state.email}
             name="email"
@@ -63,8 +59,8 @@ class Form extends Component {
             type="password"
             placeholder="Password"
           />
-          <button onClick={this.handleFormSubmit}>Submit</button>
-        </form>
+          <button onClick={this.handleFormSubmit}>Login</button>
+        </form> 
       </div>
     );
   }

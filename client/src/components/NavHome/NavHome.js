@@ -1,4 +1,5 @@
 import React from "react";
+import FormLogin from "../FormLogin/FormLogin";
 
 
 function NavHome() {
@@ -7,14 +8,9 @@ function NavHome() {
         <a className="navbar-brand" href="/">
           UCare
         </a>
-        {/* <form className='navbar-form' action="">
-         <Input type='text' placeholder='email' />{' '}
-         <Input type='text' placeholder='password' />{' '}
-         <Button bsStyle='success' type='submit'>Sign in</Button>
-       </form> */}
+      <FormLogin />
       </nav>
     );
   };
-
 
 export default NavHome;

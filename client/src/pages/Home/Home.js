@@ -1,40 +1,33 @@
 import React, { Component} from "react";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row, Container } from "../../components/Grid/Grid";
 import NavHome from "../../components/NavHome/NavHome";
-import Form from "../../components/FormLogin/FormLogin";
+import Footer from "../../components/Footer/Footer";
+import home from "./home.jpg";
 
 class Home extends Component {
-  state = {
-   
-  };
 
   render() {
     return (
       <Container fluid>
-        <NavHome>
-          <Form />
-        </NavHome>
+  
+        <NavHome />
 
         <Row>
           <Col size="8">
-          {/* Picture goes here */}
-
+            <img src={home} alt ="UCare"/>
           </Col>
-
           <Col size="4">
-          {/* About UCare goes here */}
-
+            <div>
+              <p>We are a cloud based</p>
+            </div>
           </Col>
-
         </Row>
 
+        <Footer />
 
-
-
-            
        </Container>
-);
-}
+    );
+  }
 }
 
 export default Home;
