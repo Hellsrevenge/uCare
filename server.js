@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const axios = require("axios");
+const skype = requre("skype");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -16,7 +17,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
-
     app.get("/api/patients/:id", function(req, res) {
         db.Patient.findOne({ _id: req.params.id })
             .populate("contacts")
@@ -29,6 +29,9 @@ if (process.env.NODE_ENV === "production") {
             });
     });
 
+    app.post("/api/appointments",function(req,res) {
+
+    });
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
