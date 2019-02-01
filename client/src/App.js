@@ -8,7 +8,9 @@ import PatientProfile from "./pages/PatientProfile/PatientProfile";
 import NewAppt from "./pages/NewAppt/NewAppt";
 import PatientFile from "./pages/PatientFile/PatientFile";
 import Search from "./pages/SearchResults/SearchResults";
-import Footer from "./components/Footer/Footer";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import Support from "./pages/Support/Support";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -23,9 +25,11 @@ function App() {
           <Route exact path="/newappt" component={NewAppt} />
           <Route exact path="/patient/:id" component={PatientFile} />
           <Route exact path="/search" component={Search} />
+          <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/support" component={Support} />
+          <Route exact path="/contact" component={Contact} />
+
         </Switch>
-        {/* Footer component that will show up on every page */}
-        <Footer />
       </div>
     </Router>
   );
