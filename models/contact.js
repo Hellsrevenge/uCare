@@ -6,7 +6,6 @@ const contactSchema = new Schema({
     lastName: { type: String, required: true },
     email: { type: String},
     phone: {type: String},
-    skypeid: {type: String},
     patient: {
         type: Schema.Types.ObjectId,
         ref: "Patient"

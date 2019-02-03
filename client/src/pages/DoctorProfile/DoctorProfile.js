@@ -1,26 +1,17 @@
 import React from "react";
 import "./DoctorProfile.css";
+import Calendar from "../../components/Calendar/Calendar";
 
-class Books extends Component {
-    state = {
-      
-    };
-  
-    componentDidMount() {
-      this.loadBooks();
-    }
-  
-    loadBooks = () => {
-      API.getBooks()
-        .then(res => this.setState({ books: res.data }))
-        .catch(err => console.log(err));
-    };
+
 
 
 
 function DoctorProfile(props) {
     return (
+        <div>
+        <Calendar />
         <div>Hello</div>
+        </div>
     );
 }
 export default DoctorProfile;
