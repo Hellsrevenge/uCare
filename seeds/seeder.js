@@ -9,7 +9,7 @@ function sleep(ms) {
 
 seeder.connect(MONGODB_URI, function () {
     seeder.loadModels([
-        'models/patient.js'
+        'models/patients.js'
     ]);
 
     seeder.clearModels(['Patient'], function () {
@@ -28,8 +28,8 @@ models.Patient.find({}).exec(function(error, dbPatients) {
 
     seeder.connect(MONGODB_URI, function () {
         seeder.loadModels([
-            'models/appointment.js',
-            'models/contact.js'
+            'models/appointments.js',
+            'models/contacts.js'
         ]);
 
         seeder.clearModels(['Appointment', 'Contact'], function () {
