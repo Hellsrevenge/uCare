@@ -9,7 +9,7 @@ function NewAppt(props) {
         <div>
         <Container>
             
-                    <FormAppt />
+        <FormAppt />
             
         {/* <CalendarDoc /> */}
         </Container>
