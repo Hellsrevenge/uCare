@@ -42,7 +42,7 @@ class Form extends Component {
 
   handleselectedOption = event => {
     //if selected option is skype, hit skype API for link
-    
+
   }
 
   render() {
@@ -74,7 +74,7 @@ class Form extends Component {
           <Col size="6">
             <input 
             type="radio" 
-            value="" 
+            value={this.state.slectedOption}
             name="skype"
             checked={this.state.selectedOption === "video"}
             /> Video Appointment
@@ -83,7 +83,7 @@ class Form extends Component {
           <Col size="6">
             <input 
             type="radio"
-            value="inperson"
+            value={this.state.slectedOption}
             name="inperson"
             checked={this.state.selectedOption === "inperson"}
             />
