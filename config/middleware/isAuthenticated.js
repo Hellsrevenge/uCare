@@ -1,11 +1,23 @@
-// This is middleware for restrictng routes a user is not allowed to visit if not logged in
+const jwt = require('jsonwebtoken');
+const secret = 'mysecretsshhh!';
+
 module.exports = function(req, res, next) {
-    // If the user is logged in, continue with the request to the restricted route
-    if (req.user) {
-      return next();
+    const token =
+        req.body.token ||
+        req.query.token ||
+        req.headers['x-access-token'] ||
+        req.cookies.token;
+
+    if (!token) {
+        res.status(401).send('Unauthorized: No token provided');
+    } else {
+        jwt.verify(token, secret, function(err, decoded) {
+            if (err) {
+                res.status(401).send('Unauthorized: Invalid token');
+            } else {
+                req.email = decoded.email;
+                next();
+            }
+        });
     }
-  
-    // If the user isnt' logged in, redirect them to the login page
-    return res.redirect("/");
-  };
-  
+};

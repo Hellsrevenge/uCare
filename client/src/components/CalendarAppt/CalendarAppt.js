@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DateTimePicker from 'react-datetime-picker';
-
 import './CalendarAppt.css';
 
 class Sample extends Component {
