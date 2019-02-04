@@ -1,25 +1,20 @@
-import React from "react";
-import "./PatientProfile.css";
-import CalendarAppt from "../../components/CalendarAppt/CalendarAppt";
-import { Col, Row, Container } from "../../components/Grid/Grid";
+import React, { Component} from "react";
+import NavHome from "../../components/NavHome/NavHome";
+import {Container} from "../../components/Grid/Grid";
 
-function PatientProfile(props) {
-    
-    return (
-        <div>
-        <Container>
-            <Row>
-                <Col size="10">
-                    {/* <img className ="drhouse" src={drhouse} alt="Doctor" /><br></br> */}
-                    <div>"TODO"</div><br></br>
-                    <CalendarAppt />
-                    <div>"Medicine Checker"</div><br></br>
-                    <div>"Doctor's Note"</div><br></br>
+import AuthHelperMethods from '../../components/AuthHelperMethods';
+import withAuth from '../../components/withAuth';
 
-                </Col>
-            </Row>
-        </Container>
-        </div>
-    );
+class PatientProfile extends Component {
+    Auth = new AuthHelperMethods();
+
+    render() {
+        return (
+            <Container fluid>
+                <NavHome />
+            </Container>
+        )
+    }
 }
-export default PatientProfile;
+
+export default withAuth(PatientProfile);

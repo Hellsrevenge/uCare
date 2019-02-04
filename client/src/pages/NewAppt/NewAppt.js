@@ -14,7 +14,6 @@ function NewAppt(props) {
             
         <FormAppt />
             
-        {/* <CalendarDoc /> */}
         </Container>
         </div>
     );
