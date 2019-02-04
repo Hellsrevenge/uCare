@@ -10,14 +10,18 @@ module.exports = (sequelize, DataTypes) => {
         password: DataTypes.STRING,
         image: DataTypes.STRING,
         age: DataTypes.INTEGER,
-        conditions: DataTypes.STRING,
-        medications: DataTypes.STRING,
     }, {});
     Patients.associate = function (models) {
         Patients.hasMany(models.Appointments, {
             onDelete: "cascade"
         });
         Patients.hasMany(models.Contacts, {
+            onDelete: "cascade"
+        });
+        Patients.hasMany(models.Medicine, {
+            onDelete: "cascade"
+        });
+        Patients.hasMany(models.Conditions, {
             onDelete: "cascade"
         });
     };
