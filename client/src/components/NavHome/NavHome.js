@@ -8,7 +8,7 @@ function NavHome() {
         <a className="navbar-brand" href="/">
           UCare
         </a>
-      <FormLogin />
+        <FormLogin />
       </nav>
     );
   };

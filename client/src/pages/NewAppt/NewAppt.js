@@ -7,7 +7,8 @@ function NewAppt(props) {
     
     return (
         <div>
-        <Container>
+        <Container fluid>
+
             
         <FormAppt />
             
