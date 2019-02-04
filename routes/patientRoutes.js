@@ -5,7 +5,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
 
-    app.post("/api/patient/login", function (req, res) {
+    app.post("/api/patients/login", function (req, res) {
         const {email, password} = req.body;
 
         db.Patients.findOne({
@@ -23,7 +23,7 @@ module.exports = function (app) {
                     // Issue token
                     const payload = {email};
                     const token = jwt.sign(payload, secret, {expiresIn: '1h'});
-                    res.cookie('token', token, {httpOnly: true}).sendStatus(200);
+                    res.cookie('token', token, {httpOnly: true}).json({token: token});
                 } else {
                     res.status(401).json({error: 'Incorrect email or password'});
                 }
@@ -32,15 +32,15 @@ module.exports = function (app) {
     });
 
     // Check token
-    app.get("/api/patient/token", isAuthenticated, function (req, res) {
-        res.sendStatus(200);
+    app.get("/api/patients/token", isAuthenticated, function (req, res) {
+        res.sendStatus(200).json({valid:true});
     });
 
-    app.get("/api/patient/logout", function (req, res) {
+    app.get("/api/patients/logout", function (req, res) {
         //
     });
 
-    app.post("/api/patient/signup", function (req, res, next) {
+    app.post("/api/patients/signup", function (req, res, next) {
         if (!req.body.email || !req.body.password) {
             res.status(422).json({error: "Missing credentials"});
             return next("Missing credentials");
