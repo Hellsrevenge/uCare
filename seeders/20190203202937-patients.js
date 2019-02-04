@@ -27,7 +27,7 @@ module.exports = {
                 image: 'http://www.gstatic.com/tv/thumb/persons/33623/33623_v9_bc.jpg',
                 age: 55,
                 conditions: 'ADHD',
-                medications: 'Aderol',
+                medications: 'Aderral',
             },
             {
                 id: 3,
