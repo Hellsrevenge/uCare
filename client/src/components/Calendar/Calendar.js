@@ -1,4 +1,4 @@
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar/dist/entry.nostyle';
 // import React from "react";
 import React, { Component} from "react";
  

@@ -76,7 +76,7 @@ class Form extends Component {
             type="radio" 
             value={this.state.slectedOption}
             name="skype"
-            checked={this.state.selectedOption === "video"}
+            // checked={this.state.selectedOption === "video"}
             /> Video Appointment
           </Col>
 
@@ -85,7 +85,7 @@ class Form extends Component {
             type="radio"
             value={this.state.slectedOption}
             name="inperson"
-            checked={this.state.selectedOption === "inperson"}
+            // checked={this.state.selectedOption === "inperson"}
             />
               In-person Appointment 
           </Col>
