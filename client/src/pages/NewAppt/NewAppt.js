@@ -4,14 +4,12 @@ import { Col, Row, Container } from "../../components/Grid/Grid";
 import FormAppt from "../../components/FormAppt/FormAppt";
 
 
-
 function NewAppt(props) {
     
     return (
         <div>
         <Container fluid>
 
-            
         <FormAppt />
             
         </Container>
