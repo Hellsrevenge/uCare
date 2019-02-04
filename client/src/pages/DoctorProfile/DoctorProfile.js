@@ -1,35 +1,44 @@
 import React from "react";
 import "./DoctorProfile.css";
 import drhouse from './drhouse.jpeg'; 
-// import CalendarAppt from "../../components/CalendarAppt/CalendarAppt";
-// import CalendarDoc from "../../components/CalendarDoc/CalendarDoc";
+import CalendarEx from "../../components/Calendar/Calendar";
 import NavDoctor from "../../components/NavDoctor/NavDoctor";
 import { Col, Row, Container } from "../../components/Grid/Grid";
+import Wrapper from "../../components/Wrapper/Wrapper"
 
 function DoctorProfile(props) {
     
     return (
-        <div>
-        <Container>
-            <Row>
+    <div>
+        <Wrapper>
+            <Container fluid>
+             
+                    <NavDoctor />
+<Container fluid>
+              <Row>
                 <Col size="2">
-                    <img className ="drhouse" src={drhouse} alt="Doctor" /><br></br>
-                    <div>"TODO"</div><br></br>
-                    {/* <CalendarAppt /> */}
-                    <div>"Medicine Checker"</div><br></br>
-                    <div>"Doctor's Note"</div><br></br>
+
+                    <div className="list-group">
+                    <a className="list-group-item" href="#"><i className="fas fa-notes-medical fa-2x" aria-hidden="true"></i>&nbsp; Doctor's Note</a>
+                    <a className="list-group-item" href="#"><i className="fas fa-book-medical fa-2x" aria-hidden="true"></i>&nbsp; Search Medicine</a>
+                    <a className="list-group-item" href="#"><i className="fas fa-book-medical fa-2x" aria-hidden="true"></i>&nbsp; Applications</a>
+                    <a className="list-group-item" href="#"><i className="fa fa-cog fa-fw fa-2x" aria-hidden="true"></i>&nbsp; Settings</a>
+                    </div>
+<br></br>
                 </Col>
                 <Col size="10">
-                <NavDoctor /><br></br>
-                <div>"Calendar goes here"</div><br></br>
-                {/* <CalendarDoc /> */}
-
-
+                    <CalendarEx />
                 </Col>
-            </Row>
-        {/* <CalendarDoc /> */}
-        </Container>
-        </div>
+
+              </Row>
+              </Container>
+
+
+
+            </Container>
+        </Wrapper>
+    </div>
     );
 }
+
 export default DoctorProfile;

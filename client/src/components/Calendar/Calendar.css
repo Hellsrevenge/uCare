@@ -6,6 +6,13 @@ body {
   margin: 0;
   font-family: Segoe UI, Tahoma, sans-serif;
 }
+
+.react-calendar {
+  width: 100% !important;
+}
+
+
+
 .Sample input,
 .Sample button {
   font: inherit;
@@ -33,7 +40,7 @@ body {
 }
 .Sample__container__content {
   display: flex;
-  max-width: 100%;
+  /* max-width: 100%; */
   flex-basis: 420px;
   flex-direction: column;
   flex-grow: 100;
