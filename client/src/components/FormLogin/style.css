@@ -8,5 +8,11 @@
   margin-bottom: 5px;
   width: 100%;
 }
+.navbar a {
+  color: #fff;
+}
+.right {
+  float:right;
+}
 
 
