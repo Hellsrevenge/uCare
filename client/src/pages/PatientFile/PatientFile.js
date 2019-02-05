@@ -15,8 +15,7 @@ function PatientFile (props) {
       <NavPatient />
     
     <Container fluid>
-    <Row>
-      <Container fluid>
+      <Row>
          <Col size ="4">
             <Row>
               <Col size ="4">
@@ -44,14 +43,15 @@ function PatientFile (props) {
               </Col>
             </Row>
           </Col>
-        </Container>
-      </Row>
-        <Card>
+          <Card>
           <p>
           test
           </p>
        </Card>
-       </Container>
+       </Row>
+        </Container>
+   
+       
 
       </div>
       
