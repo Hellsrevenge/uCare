@@ -7,16 +7,15 @@ body {
   font-family: Segoe UI, Tahoma, sans-serif;
 }
 
-.react-calendar {
-  width: 100% !important;
-}
+
 
 .react-calendar {
-  width: 350px;
+  width: 802px;
+  height: 400px;
   max-width: 100%;
   background: white;
   border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif;
   line-height: 1.125em;
 }
 .react-calendar,

@@ -3,6 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
+      <div className = "footer">
     <div className="card">
         <div className="card-body">
             <a href="/aboutus" className="btn btn-primary">About UCare</a>
@@ -12,6 +13,7 @@ function Footer() {
         <div className="card-footer text-muted">
             UCare
         </div>
+    </div>
     </div>
     
   );

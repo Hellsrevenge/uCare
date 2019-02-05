@@ -1,16 +1,26 @@
 
+body {
+    font-family: 'Nunito', sans-serif;
 
+}
 .navbar{
     height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-#doccont {
-    height: 400px;
-    width: 1000px;
-    background-color: darkslategray;
+.container-fluid{
+    height:800px;
 }
+
+.react-calendar {
+    
+        width: 802px;
+        height: 402px;
+    
+}
+
+
 
 
 

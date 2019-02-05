@@ -17,12 +17,14 @@ class Home extends Component {
         <Container fluid>
 
         <Row>
-          <Col size="8">
+          <Col size="6">
             <img id="googlephoto" src={home} alt ="UCare"/>
           </Col>
           <Col size="4">
             <div>
-              <p>We are a cloud based</p>
+              <p>
+              UCARE is a platform that aims to bring transparency and accessibility to patients, effieciency and organization to healthcare professionals, and the modern web to the healthcare system.
+              </p>
             </div>
           </Col>
         </Row>

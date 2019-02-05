@@ -1,13 +1,21 @@
-import React from "react";
+import React, {Component} from "react";
+import {withRouter} from "react-router-dom";
+import logo from "./logo.png";
 
+class NavDoctor extends Component {
+    render() {
+        return (
+            <div>
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+            
+            <img className ="homeimg rounded-circle" src= {logo}></img>
+                <a className="navbar-brand" href="/">
+                    <div className="ourname">
+                    UCare
+                    </div>
+                </a>
 
-
-function NavDoctor() {
-    return (
-
-
-<nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
 
@@ -32,13 +40,18 @@ function NavDoctor() {
       </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+      <input className="form-control mr-sm-2" type="search" aria-label="Search"></input>
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
 
-    );
-  };
 
-export default NavDoctor;
+
+
+            </div>
+        );
+    }
+}
+
+export default withRouter(NavDoctor);

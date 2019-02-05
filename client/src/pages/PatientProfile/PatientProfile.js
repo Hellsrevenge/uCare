@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import NavHome from "../../components/NavHome/NavHome";
+import NavPatient from "../../components/NavHome/NavHome";
 import {Container} from "../../components/Grid/Grid";
 
 import AuthHelperMethods from '../../components/AuthHelperMethods';
@@ -11,7 +11,7 @@ class PatientProfile extends Component {
     render() {
         return (
             <Container fluid>
-                <NavHome />
+                <NavPatient />
             </Container>
         )
     }
