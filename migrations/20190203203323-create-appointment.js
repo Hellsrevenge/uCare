@@ -17,6 +17,9 @@ module.exports = {
             status: {
                 type: Sequelize.INTEGER
             },
+            duration: {
+                type: Sequelize.INTEGER
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
@@ -27,7 +30,10 @@ module.exports = {
             },
             patientId: {
                 type: Sequelize.INTEGER,
-                references: {model: 'Patients', key: 'id'}
+                references: {model: 'Patients', key: 'id'},
+            },
+            skypeUrl: {
+                type: Sequelize.STRING
             },
             doctorId: {
                 type: Sequelize.INTEGER,
