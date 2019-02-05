@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -8,10 +9,11 @@ function Footer() {
             <a href="/support" className="btn btn-primary">Customer Support</a>
             <a href="/contact" className="btn btn-primary">Contact Us</a>
         </div>
-        <div class="card-footer text-muted">
+        <div className="card-footer text-muted">
             UCare
         </div>
     </div>
+    
   );
 }
 

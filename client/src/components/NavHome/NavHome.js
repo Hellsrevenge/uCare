@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import FormLogin from "../FormLogin/FormLogin";
 import AuthHelperMethods from '../../components/AuthHelperMethods';
+import "./NavHome.css";
+import logo from "./logo.png";
 
 class NavHome extends Component {
     Auth = new AuthHelperMethods();
@@ -26,9 +28,12 @@ class NavHome extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-lg navbar-dark">
+            <img className ="homeimg rounded-circle" src= {logo}></img>
                 <a className="navbar-brand" href="/">
+                    <div className="ourname">
                     UCare
+                    </div>
                 </a>
                 {this.renderLoginForm()}
             </nav>
