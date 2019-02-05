@@ -4,6 +4,8 @@ module.exports = (sequelize, DataTypes) => {
         subject: DataTypes.STRING,
         date: DataTypes.DATE,
         status: DataTypes.INTEGER,
+        duration: DataTypes.INTEGER,
+        skypeUrl: DataTypes.STRING,
         doctorId: {
             type: DataTypes.INTEGER,
             references: {model: 'Doctors', key: 'id'}
