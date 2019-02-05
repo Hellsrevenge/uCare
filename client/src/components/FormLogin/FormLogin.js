@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Route, withRouter} from 'react-router-dom';
-import "./style.css";
-
+import "./FormLogin.css";
 import AuthHelperMethods from '../../components/AuthHelperMethods';
 
 class Login extends Component {
@@ -48,16 +47,20 @@ class Login extends Component {
     render() {
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+        <div>
+            <div className="form-group">
+
+                <form className="form-inline" onSubmit={this.handleSubmit}>
                     <label>
-                        Name:
-                        <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                        <input
+                         type="text"
+                         value={this.state.value}
+                        onChange={this.handleChange}
+                        placeholder="Name"
+                        />
                     </label>
                     <input type="submit" value="Submit"/>
-                </form>
-
-                <form className="form-inline">
+                
                     <input
                         value={this.state.email}
                         name="email"
@@ -75,6 +78,7 @@ class Login extends Component {
                     <button onClick={this.handleFormSubmit}>Login</button>
                 </form>
             </div>
+        </div>
         );
     }
 }

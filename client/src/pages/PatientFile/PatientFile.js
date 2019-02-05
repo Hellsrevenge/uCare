@@ -4,8 +4,10 @@ import { Col, Row, Container } from "../../components/Grid/Grid";
 import List from "../../components/List/List";
 // import {Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
+import "./PatientFile.css";
 
-function PatientFile () {
+
+function PatientFile (props) {
   
     return (
 

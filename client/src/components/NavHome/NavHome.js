@@ -1,22 +1,12 @@
 import React, {Component} from "react";
 import FormLogin from "../FormLogin/FormLogin";
 import AuthHelperMethods from '../../components/AuthHelperMethods';
+import "./NavHome.css";
+import logo from "./logo.png";
 
 class NavHome extends Component {
     Auth = new AuthHelperMethods();
 
-<<<<<<< HEAD
-function NavHome() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a className="navbar-brand" href="/">
-          UCare
-        </a>
-        <FormLogin />
-      </nav>
-    );
-  };
-=======
     handleLogout = () => {
         this.Auth.logout();
         this.props.history.replace('/');
@@ -38,15 +28,20 @@ function NavHome() {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div>
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+            
+            <img className ="homeimg rounded-circle" src= {logo}></img>
                 <a className="navbar-brand" href="/">
+                    <div className="ourname">
                     UCare
+                    </div>
                 </a>
                 {this.renderLoginForm()}
             </nav>
+            </div>
         );
     }
 };
->>>>>>> f69fa434b3a88883ebd840c2f83ee0f1afcc87c8
 
 export default NavHome;

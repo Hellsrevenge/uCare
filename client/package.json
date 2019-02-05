@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "jwt-decode": "^2.2.0",
     "object-assign": "^4.1.1",
     "react": "^16.7.0",
     "react-datetime-picker": "^2.1.1",
