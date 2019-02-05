@@ -12,8 +12,6 @@ function DoctorProfile(props) {
     
     return (
     <div>
-        <Wrapper>
-            <Container fluid>
                 <NavDoctor />
             <Container fluid>
               <Row>
@@ -24,16 +22,14 @@ function DoctorProfile(props) {
                     <a className="list-group-item" href="#"><i className="fas fa-book-medical fa-2x" aria-hidden="true"></i>&nbsp; Applications</a>
                     <a className="list-group-item" href="#"><i className="fas fa-cog fa-2x" aria-hidden="true"></i>&nbsp;Settings</a>
                     </div>
-<br></br>
                 </Col>
+
                 <Col size="10">
                     <CalendarEx />
                 </Col>
 
               </Row>
-              </Container>
-        </Container>
-    </Wrapper>
+            </Container>
     </div>
     );
 }

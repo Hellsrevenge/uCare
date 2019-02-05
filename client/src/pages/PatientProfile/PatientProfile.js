@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import NavHome from "../../components/NavHome/NavHome";
+import NavPatient from "../../components/NavHome/NavHome";
 import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
 
@@ -22,6 +22,9 @@ class PatientProfile extends Component {
     render() {
         return (
             <Container fluid>
+
+                <NavPatient />
+
                 <NavHome />
                 <div>
                     <h3>Appointments</h3>
@@ -42,6 +45,7 @@ class PatientProfile extends Component {
                         ) : null
                     }
                 </div>
+
             </Container>
         )
     }

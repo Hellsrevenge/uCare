@@ -8,4 +8,35 @@
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+    
+    width: 1000px;
+    z-index: 1;
+    
 }
+
+.list-group-item {
+color: white;
+font-family: 'Nunito', sans-serif;
+
+}
+.form-control{
+    color: black;
+}
+.container-fluid{
+    z-index: 2;
+}
+
+
+.form-inline {
+    font-family: 'Nunito', sans-serif;
+
+}
+.btn.btn-outline-success {
+    border-color: currentColor;
+    color: white;
+    background-color: #34495E;
+    border: 3px solid black;
+    font-family: 'Nunito', sans-serif;
+
+}
+
