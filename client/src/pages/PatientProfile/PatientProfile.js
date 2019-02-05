@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import NavPatient from "../../components/NavHome/NavHome";
+import NavPatient from "../../components/NavPatient/NavPatient";
 import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
 
@@ -25,7 +25,7 @@ class PatientProfile extends Component {
 
                 <NavPatient />
 
-                <NavHome />
+                {/* <NavHome /> */}
                 <div>
                     <h3>Appointments</h3>
                     {
