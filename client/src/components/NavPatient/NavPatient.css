@@ -1,0 +1,21 @@
+.navbar {
+    background-color: white;
+    border-bottom : 10px solid #34495E ;
+    
+}
+
+.homeimg {
+    width: 100px;
+}
+
+.ourname {
+    font-family: 'Nunito', sans-serif;
+    color: red;
+    font-size: 2rem;
+    
+}
+.navbar-dark{
+    color: royalblue;
+}
+
+

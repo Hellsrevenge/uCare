@@ -1,0 +1,11 @@
+/* .card-body {
+    background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg")
+} */
+
+.card {
+    /* background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg"); */
+
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
