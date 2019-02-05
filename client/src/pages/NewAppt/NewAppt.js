@@ -24,8 +24,9 @@ class NewAppt extends Component {
     render() {
         return (
             <div>
+            <NavHome/>
+
                 <Container>
-                    <NavHome/>
                     <FormAppt doctors={this.state.doctors}/>
                 </Container>
             </div>

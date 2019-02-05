@@ -1,6 +1,4 @@
-/* .card-body {
-    background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg")
-} */
+
 
 .card {
     /* background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg"); */
@@ -10,7 +8,6 @@
     margin-bottom: 10px; /* Added */
     
     width: 1000px;
-    z-index: 1;
     
 }
 
