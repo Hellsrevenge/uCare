@@ -28,7 +28,9 @@ class NavHome extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark">
+            <div>
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+            
             <img className ="homeimg rounded-circle" src= {logo}></img>
                 <a className="navbar-brand" href="/">
                     <div className="ourname">
@@ -37,6 +39,7 @@ class NavHome extends Component {
                 </a>
                 {this.renderLoginForm()}
             </nav>
+            </div>
         );
     }
 };

@@ -9,9 +9,12 @@ class Home extends Component {
 
   render() {
     return (
-      <Container fluid>
-  
+      
+  <div>
         <NavHome />
+        
+
+        <Container fluid>
 
         <Row>
           <Col size="8">
@@ -27,6 +30,7 @@ class Home extends Component {
         <Footer />
 
        </Container>
+       </div>
     );
   }
 }
