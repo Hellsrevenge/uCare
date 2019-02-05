@@ -7,6 +7,11 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Medicine.associate = function (models) {
         // associations can be defined here
+        Medicine.belongsToMany(models.Patients, {
+            foreignKey: {
+                allowNull: false
+            }
+        })
 
     };
     return Medicine;

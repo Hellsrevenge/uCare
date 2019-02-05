@@ -3,7 +3,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-    const PatDoc = sequelize.define('Pat_DocRelation', {
+    const PatDoc = sequelize.define('PatDoc', {
     }, {});
     PatDoc.associate = function (models) {
         PatDoc.belongsTo(models.Patients, {

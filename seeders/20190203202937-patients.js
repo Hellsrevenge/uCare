@@ -40,7 +40,7 @@ module.exports = {
                 image: 'https://www.google.com/search?tbm=isch&q=Lindsay+O%27Lohan',
                 age: 44,
                 conditions: 'Depression',
-                medications: 'RedLabel',
+                medications: 'Paxil',
             },
         ]);
     },

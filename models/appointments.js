@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
     const Appointments = sequelize.define('Appointments', {
         subject: DataTypes.STRING,
@@ -11,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
         patientId: {
             type: DataTypes.INTEGER,
             references: {model: 'Patients', key: 'id'}
-        }
+        }, 
+        notes: DataTypes.STRING
     }, {});
     Appointments.associate = function (models) {
         Appointments.belongsTo(models.Patients, {

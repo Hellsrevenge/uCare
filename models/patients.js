@@ -12,16 +12,27 @@ module.exports = (sequelize, DataTypes) => {
         age: DataTypes.INTEGER,
     }, {});
     Patients.associate = function (models) {
+        //one to many one patient mult apps
         Patients.hasMany(models.Appointments, {
             onDelete: "cascade"
         });
+
+        // one patient many contacts
         Patients.hasMany(models.Contacts, {
             onDelete: "cascade"
         });
+
+        // one patient many medicines
         Patients.hasMany(models.Medicine, {
             onDelete: "cascade"
         });
+        
         Patients.hasMany(models.Conditions, {
+            onDelete: "cascade"
+        });
+
+        // the many to many relation
+        Patients.hasMany(models.Doctors, {
             onDelete: "cascade"
         });
     };

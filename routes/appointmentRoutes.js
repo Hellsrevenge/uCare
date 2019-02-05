@@ -13,5 +13,4 @@ module.exports = function (app) {
             res.json({skype: result.urls[0]})
         });
     });
-
 };

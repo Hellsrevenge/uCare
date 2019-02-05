@@ -1,5 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
+
     const Doctors = sequelize.define('Doctors', {
         firstName: DataTypes.STRING,
         lastName: DataTypes.STRING,
@@ -9,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Doctors.associate = function (models) {
         // associations can be defined here
+        Doctors.hasMany(models.Patients, {
+            onDelete: "cascade"
+        });
     };
     return Doctors;
 };
