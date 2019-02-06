@@ -14,9 +14,10 @@
     font-size: 2rem;
     
 }
-/* .navbar-dark{
-    color: royalblue;
-} */
+
+.nav-link {
+    color:red;
+}
 
 
 
