@@ -5,12 +5,24 @@ const db = require("../models");
 module.exports = function (app) {
 
     app.get("/api/appointments", isAuthenticated, function (req, res) {
-        db.Appointments.all().then(appointments => {
+       /* db.Appointments.all().then(appointments => {
             res.json(appointments);
-        });
+        });*/
+        
+        const {username} = req.params
+            db.Patients.findAll({
+                include: [{
+                    model: Appointments,
+                    }], 
+                    where: {firstName: username}
+                }).then(response => {
+                     res.json(response);
+                });
+
     });
 
     app.get("/api/appointments/:id", isAuthenticated, function (req, res) {
+        console.log("appointments");
         res.json([]);
     });
 
