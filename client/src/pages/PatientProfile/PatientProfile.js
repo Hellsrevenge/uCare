@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
-
+import API from "../../utils/API"
 import AuthHelperMethods from "../../components/AuthHelperMethods";
 
 import Card from "../../components/Card/Card";
@@ -12,7 +12,10 @@ import "./PatientProfile.css"
 //necessary for pulling patient name out of entered email
 
 const Auth = new AuthHelperMethods();
-var currPatient = Auth.getConfirm().email.split("@")[0];
+
+
+
+var currPatient = "leo";
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -42,11 +45,15 @@ class PatientProfile extends Component {
     }
     
     componentDidMount() {
-        fetch("/api/appointments/" + currPatient)
-            .then(response => response.json())
-            .then(data => {
-                this.setState({appointments: data});
-            });
+        API.getAppts()
+        .then(response => {
+            this.setState({appointments: response})
+        })
+        // fetch("/api/appointments")
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         this.setState({appointments: data});
+        //     });
     }
 
     render() {

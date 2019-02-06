@@ -19,6 +19,10 @@ export default {
    // returns a search
    searchFile: function(search) {
     return axios.get("/api/search/");
+  },
+
+  getAppts: function(){
+    return axios.get("/api/appointments/");
   }
 
 };
