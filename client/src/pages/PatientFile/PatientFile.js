@@ -5,10 +5,20 @@ import List from "../../components/List/List";
 // import {Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import "./PatientFile.css";
+import AuthHelperMethods from "../../components/AuthHelperMethods";
 
 
 function PatientFile (props) {
-  
+  const Auth = new AuthHelperMethods();
+
+  //first name of current patient 
+  var currPatient = Auth.getConfirm().email.split("@")[0];
+
+
+  console.log(currPatient);
+
+
+
     return (
 
       <div>
