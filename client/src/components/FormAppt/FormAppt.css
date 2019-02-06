@@ -9,9 +9,14 @@
   width: 100%;
 }
 
-.container{
+/* .container{
   height: 400px;
   width: 630px;
+} */
+
+.card-body{
+  height: 1000px;
+  width: 1000px
 }
 
 

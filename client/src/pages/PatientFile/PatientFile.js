@@ -13,8 +13,9 @@ import AuthHelperMethods from "../../components/AuthHelperMethods";
 const Auth = new AuthHelperMethods();
 var currPatient = Auth.getConfirm().email.split("@")[0];
 
-function PatientFile (props){
 
+function PatientFile (props) {
+  
 
     return (
 
@@ -50,10 +51,55 @@ function PatientFile (props){
               </Col>
             </Row>
           </Col>
-          <Card>
-          <p>
-          test for patient file
-          </p>
+        <Card heading = {"Appointment History"}>
+        <table className="table">
+  <thead>
+  <tr className="table-active">
+      <th scope="col">Date</th>
+      <th scope="col">Reason</th>
+      <th scope="col">In Person / Video</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr className="table bg-info">
+      <th scope="row">06/28/15</th>
+      <td>Rash</td>
+      <td>In-person</td>
+      <td>fill in later</td>
+    </tr>
+    <tr className="table bg-info">
+      <th scope="row">05/26/14</th>
+      <td>Rash</td>
+      <td>Video</td>
+      <td>fill in later</td>
+    </tr>
+    <tr className="table bg-primary">
+      <th scope="row">04/13/12</th>
+      <td>Depressive Episode</td>
+      <td>Video</td>
+      <td>fill in </td>
+    </tr>
+    <tr className="table bg-primary">
+      <th scope="row">04/13/12</th>
+      <td>Depressive Episode</td>
+      <td>Video</td>
+      <td>fill in </td>
+    </tr>
+    <tr className="table bg-primary">
+      <th scope="row">04/13/12</th>
+      <td>Depressive Episode</td>
+      <td>Video</td>
+      <td>fill in </td>
+    </tr>
+    <tr className="table-primary">
+      <th scope="row">01/12/10</th>
+      <td>Headache</td>
+      <td>Video</td>
+      <td>??</td>
+    </tr>
+  </tbody>
+</table>
        </Card>
        </Row>
         </Container>

@@ -28,7 +28,7 @@ class NewAppt extends Component {
             <div>
             <NavHome/>
 
-                <Container>
+                <Container fluid>
                     <FormAppt doctors={this.state.doctors}/>
                 </Container>
             </div>
