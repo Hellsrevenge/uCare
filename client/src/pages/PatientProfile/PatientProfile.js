@@ -2,6 +2,12 @@ import React, { Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
+import AuthHelperMethods from "../../components/AuthHelperMethods";
+
+//necessary for pulling patient name out of entered email
+
+const Auth = new AuthHelperMethods();
+var currPatient = Auth.getConfirm().email.split("@")[0];
 
 class PatientProfile extends Component {
     constructor(props) {
@@ -10,9 +16,9 @@ class PatientProfile extends Component {
             appointments: []
         };
     }
-
+    
     componentDidMount() {
-        fetch("/api/appointments/")
+        fetch("/api/appointments/" + currPatient)
             .then(response => response.json())
             .then(data => {
                 this.setState({appointments: data});
