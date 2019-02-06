@@ -45,7 +45,7 @@ function PatientFile (props) {
           </Col>
           <Card>
           <p>
-          test
+          test for patient file
           </p>
        </Card>
        </Row>
