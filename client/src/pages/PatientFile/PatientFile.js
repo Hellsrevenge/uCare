@@ -2,14 +2,21 @@ import React from "react";
 import Card from "../../components/Card/Card";
 import { Col, Row, Container } from "../../components/Grid/Grid";
 import List from "../../components/List/List";
-// import {Component} from "react";
+import {Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import "./PatientFile.css";
+import AuthHelperMethods from "../../components/AuthHelperMethods";
 
+//import API from "../utils/API";
+
+//necessary for pulling patient name out of entered email
+const Auth = new AuthHelperMethods();
+var currPatient = Auth.getConfirm().email.split("@")[0];
 
 
 function PatientFile (props) {
   
+
     return (
 
       <div>

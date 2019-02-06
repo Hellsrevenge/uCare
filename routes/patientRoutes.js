@@ -75,4 +75,13 @@ module.exports = function (app) {
             res.json(patient);
         })
     });
+
+/*
+    app.get("/api/doctor/patients/:id", isAuthenticated, function (req, res) {
+        db.Patients.findAll({
+            where: {
+                firstName: req.params.id
+            }
+        })
+    });*/
 };

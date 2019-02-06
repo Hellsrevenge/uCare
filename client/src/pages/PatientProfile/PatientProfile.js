@@ -2,9 +2,17 @@ import React, { Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
+
+import AuthHelperMethods from "../../components/AuthHelperMethods";
+
 import Card from "../../components/Card/Card";
 import insimage from "./ins2.png";
 import "./PatientProfile.css"
+
+//necessary for pulling patient name out of entered email
+
+const Auth = new AuthHelperMethods();
+var currPatient = Auth.getConfirm().email.split("@")[0];
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -32,9 +40,9 @@ class PatientProfile extends Component {
             appointments: []
         };
     }
-
+    
     componentDidMount() {
-        fetch("/api/appointments/")
+        fetch("/api/appointments/" + currPatient)
             .then(response => response.json())
             .then(data => {
                 this.setState({appointments: data});
