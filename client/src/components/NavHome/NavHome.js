@@ -29,14 +29,13 @@ class NavHome extends Component {
     render() {
         return (
             <div>
-            <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
-            
-            <img className ="homeimg rounded-circle" src= {logo}></img>
-                <a className="navbar-brand" href="/">
-                    <div className="ourname">
-                    UCare
-                    </div>
-                </a>
+            <nav className="navbar sticky-top navbar-expand-lg navbar-dark justify-content-between">
+                <div>
+                    <img className ="homeimg rounded-circle" src= {logo}></img>
+                    <a className="navbar-brand" href="/">
+                        <div className="ourname">UCare</div>
+                    </a>
+                </div>
                 {this.renderLoginForm()}
             </nav>
             </div>
