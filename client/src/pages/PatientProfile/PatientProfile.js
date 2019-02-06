@@ -20,6 +20,8 @@ const currentmeds = {
 
   }
 
+  
+
 class PatientProfile extends Component {
 
     constructor(props) {

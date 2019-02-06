@@ -29,7 +29,7 @@ class NavHome extends Component {
     render() {
         return (
             <div>
-            <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+            <nav className="navbar sticky-top navbar-expand-lg">
             
             <img className ="homeimg rounded-circle" src= {logo}></img>
                 <a className="navbar-brand" href="/">

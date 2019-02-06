@@ -1,12 +1,18 @@
 import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 import logo from "./logo.png";
+import "./NavPatient.css"
+
+const navItem = {
+color:"red"
+
+}
 
 class NavPatient extends Component {
     render() {
         return (
             <div>
-            <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
+            <nav className="navbar sticky-top navbar-expand-lg ">
             
             <img className ="homeimg rounded-circle" src= {logo}></img>
                 <a className="navbar-brand" href="/">
@@ -20,7 +26,7 @@ class NavPatient extends Component {
   </button>
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav mr-auto">
+    <ul className="navbar-nav mr-auto" style={navItem}>
       <li className="nav-item active">
         <a className="nav-link" href="/patientlist">Patient Files <span className="sr-only">(current)</span></a>
       </li>
