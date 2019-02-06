@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid/Grid";
 import NavHome from "../../components/NavHome/NavHome";
 import FormAppt from "../../components/FormAppt/FormAppt";
-
 import withAuth from '../../components/withAuth';
+import "./NewAppt.css";
+
+
 
 class NewAppt extends Component {
     constructor(props) {

@@ -51,7 +51,7 @@ class Login extends Component {
             <div className="form-group">
 
                 <form className="form-inline" onSubmit={this.handleSubmit}>
-                    <label>
+                    {/* <label>
                         <input
                          type="text"
                          value={this.state.value}
@@ -59,7 +59,7 @@ class Login extends Component {
                         placeholder="Name"
                         />
                     </label>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit"/> */}
                 
                     <input
                         value={this.state.email}
