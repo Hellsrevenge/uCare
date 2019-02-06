@@ -1,10 +1,10 @@
 import React, { Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
-import {Container, Row, Col} from "../../components/Grid/Grid";
+import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
 import Card from "../../components/Card/Card";
 import insimage from "./ins2.png";
-
+import "./PatientProfile.css"
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -17,19 +17,11 @@ const currentmeds = {
   const cardImage = {
     width: "300px",
     height: "275px"
-
   }
 
-  const cardStyle = {
-    
-    borderRadius: "25px",
-    background: "#73AD21",
-    padding: "20px", 
-    width: "200px",
-    height: "150px"  
-      
+  const testcontainer = { 
+    display: "flex"
   }
-
 
 
 class PatientProfile extends Component {
@@ -55,12 +47,10 @@ class PatientProfile extends Component {
 
             <NavPatient />
 
-            <Container fluid>
+            <Container style={testcontainer}>
 
-            <Row>
 
-                <Col size="6">
-                <Card heading= {"Appointments"} style={cardStyle}>
+                <Card heading= {"Appointments"}>
                 
                     {
                         this.state.appointments ? (
@@ -80,10 +70,8 @@ class PatientProfile extends Component {
                     }
                 
                 </Card>
-                </Col>
-
-                <Col size="6">
-                <Card heading= {"Prescription Medications"} style={cardStyle}>
+ 
+                <Card heading= {"Prescription Medications"} >
 
             <table className="table table-hover">
               <thead>
@@ -117,16 +105,12 @@ class PatientProfile extends Component {
               </tbody>
             </table>
                 </Card>
-                </Col>
 
-                <Col size="6" >
-                <Card heading= {"Insurance & Billing"} style={cardStyle}>
+                <Card heading= {"Insurance & Billing"} >
                 <img id="insphoto" src={insimage} style={cardImage} alt ="insurance"/>
 
                 </Card>
-                </Col>
 
-                <Col size="6">
                 <Card heading= {"Other Data"}>
                     {
                         this.state.appointments ? (
@@ -145,8 +129,6 @@ class PatientProfile extends Component {
                         ) : null
                     }
                 </Card>
-                </Col>
-            </Row>
 
             </Container>
             </div>

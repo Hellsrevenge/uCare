@@ -5,6 +5,11 @@ import {Col, Row, Container} from "../../components/Grid/Grid";
 import CalendarAppt from "../../components/CalendarAppt/CalendarAppt"
 import { withRouter } from 'react-router';
 
+const testcontainer = { 
+    display: "flex"
+  }
+
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -67,6 +72,8 @@ class Form extends Component {
     render() {
         return (
             <div>
+            <Container fluid style={testcontainer}>
+
                 <Card>
                     <p>
                         Appointment for {this.state.patient}
@@ -82,17 +89,17 @@ class Form extends Component {
                             placeholder="Reason for this appointment"
                         />
 
-                        <Row>
+                        {/* <Row> */}
                         <CalendarAppt onChange={this.calendarChange}/>
 
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlFile1">Upload your files here</label>
                                 <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
                             </div>
-                        </Row>
+                        {/* </Row> */}
 
-                        <Row>
-                            <Col size="6">
+                        {/* <Row> */}
+                            {/* <Col size="6"> */}
                                 <input
                                     onChange={this.handleselectedOption}
                                     type="radio"
@@ -100,9 +107,9 @@ class Form extends Component {
                                     name="type"
                                     checked={this.state.type === "video"}
                                 /> Video Appointment
-                            </Col>
+                            {/* </Col> */}
 
-                            <Col size="6">
+                            {/* <Col size="6"> */}
                                 <input
                                     onChange={this.handleselectedOption}
                                     type="radio"
@@ -111,11 +118,11 @@ class Form extends Component {
                                     checked={this.state.type === "inperson"}
                                 />
                                 In-person Appointment
-                            </Col>
-                        </Row>
+                            {/* </Col> */}
+                        {/* </Row> */}
 
-                        <Row>
-                            <Col size="4">
+                        {/* <Row> */}
+                            {/* <Col size="4"> */}
                                 <select onChange={this.handleDoctorOption}>
                                     <option>Select Doctor</option>
                                     {
@@ -129,9 +136,9 @@ class Form extends Component {
                                         ) : null
                                     }
                                 </select>
-                            </Col>
+                            {/* </Col> */}
 
-                            <Col size="8">
+                            {/* <Col size="8"> */}
                                 <div>
                                     <select onChange={this.handleDurationOption}>
                                         <option value="30">Select duration</option>
@@ -140,13 +147,14 @@ class Form extends Component {
                                         <option value="60">60 min</option>
                                     </select>
                                 </div>
-                            </Col>
+                            {/* </Col> */}
 
-                        </Row>
+                        {/* </Row> */}
 
                         <button onClick={this.handleFormSubmit}>Submit</button>
                     </form>
                 </Card>
+                </Container>
             </div>
 
         );

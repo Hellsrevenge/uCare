@@ -44,6 +44,7 @@ function PatientFile (props) {
               </Col>
             </Row>
           </Col>
+
         <Card heading = {"Appointment History"}>
         <table className="table">
   <thead>
@@ -96,9 +97,7 @@ function PatientFile (props) {
        </Card>
        </Row>
         </Container>
-   
        
-
       </div>
       
     );

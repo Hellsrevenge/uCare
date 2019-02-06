@@ -7,9 +7,9 @@
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     
-    width: 1000px;
+    /* width: 1000px;
     
-        height: 500px;
+    height: 1000px; */
     
 }
 
@@ -36,4 +36,7 @@ font-family: 'Nunito', sans-serif;
     font-family: 'Nunito', sans-serif;
 
 }
+
+
+
 
