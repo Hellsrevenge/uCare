@@ -5,6 +5,8 @@ import React, { Component } from "react";
 import "./PatientList.css";
 import Card from "../../components/Card/Card";
 
+
+//trying to get rounded card edges
 const cardStyle = {
   height: "200px",
   width: "600px", 
@@ -32,19 +34,9 @@ class PatientList extends Component {
   
     render() {
       return (
+        <div>
         <Container fluid>
           <Row>
-            {/* <Col size="md-6">
-              {/* <Jumbotron>
-                <h1>What Books Should I Read?</h1>
-              </Jumbotron> */}
-              {/* <form> */}
-                {/* <Input name="title" placeholder="Title (required)" />
-                <Input name="author" placeholder="Author (required)" />
-                <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-                <FormBtn>Submit Book</FormBtn> */}
-              {/* </form> */}
-            {/* </Col> */} 
             <Col size="md-6 sm-12">
 
               {this.state.patients.length ? (
@@ -68,6 +60,7 @@ class PatientList extends Component {
             </Col>
           </Row>
         </Container>
+        </div>
       );
     }
   }

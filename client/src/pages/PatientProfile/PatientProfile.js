@@ -20,7 +20,17 @@ const currentmeds = {
 
   }
 
-  
+  const cardStyle = {
+    
+    borderRadius: "25px",
+    background: "#73AD21",
+    padding: "20px", 
+    width: "200px",
+    height: "150px"  
+      
+  }
+
+
 
 class PatientProfile extends Component {
 
@@ -50,7 +60,7 @@ class PatientProfile extends Component {
             <Row>
 
                 <Col size="6">
-                <Card heading= {"Appointments"}>
+                <Card heading= {"Appointments"} style={cardStyle}>
                 
                     {
                         this.state.appointments ? (
@@ -73,7 +83,7 @@ class PatientProfile extends Component {
                 </Col>
 
                 <Col size="6">
-                <Card heading= {"Prescription Medications"}>
+                <Card heading= {"Prescription Medications"} style={cardStyle}>
 
             <table className="table table-hover">
               <thead>
@@ -109,8 +119,8 @@ class PatientProfile extends Component {
                 </Card>
                 </Col>
 
-                <Col size="6">
-                <Card heading= {"Insurance & Billing"}>
+                <Col size="6" >
+                <Card heading= {"Insurance & Billing"} style={cardStyle}>
                 <img id="insphoto" src={insimage} style={cardImage} alt ="insurance"/>
 
                 </Card>
