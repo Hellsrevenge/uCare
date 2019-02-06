@@ -10,8 +10,8 @@ import AuthHelperMethods from "../../components/AuthHelperMethods";
 //import API from "../utils/API";
 
 //necessary for pulling patient name out of entered email
-const Auth = new AuthHelperMethods();
-var currPatient = Auth.getConfirm().email.split("@")[0];
+/*const Auth = new AuthHelperMethods();
+var currPatient = Auth.getConfirm().email.split("@")[0];*/
 
 
 function PatientFile (props) {

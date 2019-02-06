@@ -3,7 +3,7 @@ import { Col, Row, Container } from "../../components/Grid/Grid";
 import React, { Component } from "react";
 import API from "../../utils/API";
 import "./PatientList.css";
-import AuthHelperMethods from "../../components/AuthHelperMethods";
+
 import Card from "../../components/Card/Card";
 
 
@@ -16,9 +16,7 @@ const cardStyle = {
   marginBottom: "10px"
 }
 
-const Auth = new AuthHelperMethods();
-var currPatient = Auth.getConfirm().email.split("@")[0];
-
+var currPatient = "leo";
 class PatientList extends Component {
     state = {
       patients: [1, 2, 3, 4]
