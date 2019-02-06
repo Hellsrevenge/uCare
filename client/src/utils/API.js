@@ -10,7 +10,7 @@ export default {
   },
   // Gets list all of the patients
   getPatients: function() {
-    return axios.get("/api/patients");
+    return axios.get("/api/doctor/patients");
   },
   // Gets a patient file
   getPatient: function(id) {

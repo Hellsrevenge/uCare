@@ -24,6 +24,7 @@ function App() {
           <Route exact path="/search" component={Search} />
 
         </Switch>
+
       </div>
     </Router>
   );

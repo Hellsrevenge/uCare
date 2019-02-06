@@ -36,6 +36,8 @@ class Form extends Component {
             body: JSON.stringify(this.state)
         }).then(data => {
             this.props.history.replace("/patient");
+            console.log(data);
+
         });
 
         this.setState({

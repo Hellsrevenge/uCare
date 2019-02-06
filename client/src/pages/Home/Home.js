@@ -5,6 +5,8 @@ import Footer from "../../components/Footer/Footer";
 import home from "./case3.png";
 import "./Home.css"
 
+
+
 class Home extends Component {
 
   render() {
@@ -29,9 +31,10 @@ class Home extends Component {
           </Col>
         </Row>
 
-        <Footer />
-
        </Container>
+
+       <Footer />
+
        </div>
     );
   }
