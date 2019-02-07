@@ -1,3 +1,23 @@
+# UCARE
+UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feauture to be present "live" during the appointments of your loved ones via video appointment option. 
+
+# Technologies Used
+- Javascript
+- REACT
+- MySQL(Sequelize)
+- Express
+- Node
+- JSON
+- CSS
+
+
+
+## Authors
+* Amanda Murillo, Varvara Kourova, Swechchha Parajuli.
+
+# Demo
+Please follow the link to [Heroku]() deployment to play with the project.
+
 # License
 
 GENERAL    DISCLAIMER AND LIMITATION OF LIABILITY
