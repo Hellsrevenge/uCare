@@ -4,6 +4,7 @@ const db = require("../models");
 
 module.exports = function (app) {
 
+    // all existing appointments
     app.get("/api/appointments", isAuthenticated, function (req, res) {
         db.Appointments.all().then(appointments => {
             res.json(appointments);
@@ -22,6 +23,7 @@ module.exports = function (app) {
 */
     });
 
+    //displaying each appointment for a certain one
     app.get("/api/appointments/:id", isAuthenticated, function (req, res) {
         console.log(req.params.id)
         const {user} = req.params.id;
@@ -33,7 +35,6 @@ module.exports = function (app) {
         }).then(response => {
             res.json(response);
         });
-
         
     });
 
