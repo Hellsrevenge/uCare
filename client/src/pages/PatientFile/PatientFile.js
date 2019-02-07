@@ -13,9 +13,7 @@ import AuthHelperMethods from "../../components/AuthHelperMethods";
 /*const Auth = new AuthHelperMethods();
 var currPatient = Auth.getConfirm().email.split("@")[0];*/
 
-
 function PatientFile (props) {
-  
 
     return (
 

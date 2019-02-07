@@ -12,9 +12,7 @@ import insimage from "./ins2.png";
 
 const Auth = new AuthHelperMethods();
 
-
-
-var currPatient = "leo";
+var currPatient = Auth.player;
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -39,7 +37,6 @@ const currentmeds = {
     height: "150px"  
       
   }
-
 
 class PatientProfile extends Component {
 
