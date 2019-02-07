@@ -1,4 +1,11 @@
+#Getting Started -- uCare
 
+
+### 2. What / Objectives / User Stories
+    The main objective of uCare is to provide a space for full scope healthcare. 
+    The intention of uCare is to let patients and doctor's have a space where they can communicate more effectively without having to always have an in-person meeting. 
+
+### 3. How / Design Description
 
 # UCARE
 UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feauture to be present "live" during the appointments of your loved ones via video appointment option. 
@@ -12,6 +19,21 @@ UCARE is a is a web based platform for patients and doctor to have a more well-r
 - JSON
 - CSS
 
+  * Functionality:
+
+
+
+### Future Development
+
+    * Multiple doctors for ONE Patient
+    * Doctor view 
+    * Creating a new user with all medical information
+
+## Versioning
+  * For the versions available, see the tags on this repository.
+
+## Authors
+  * Varvara Kourova, Amanda Murillo, Swechchha Parajuli
 
 
 ## Authors
