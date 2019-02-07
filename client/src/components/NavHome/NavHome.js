@@ -16,6 +16,7 @@ class NavHome extends Component {
         if (this.Auth.loggedIn()) {
             return (
                 <div className="right">
+                    <a href="/patient/">Profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/" onClick={this.handleLogout}>Logout</a>
                 </div>
             )

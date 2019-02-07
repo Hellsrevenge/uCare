@@ -1,0 +1,50 @@
+
+
+.card {
+    /* background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg"); */
+
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    height:500px;
+    width: 800px;
+    
+    /* width: 1000px;
+    
+    height: 1000px; */
+    
+}
+
+.col-2 {
+    margin-left: 10px;
+    padding-right: 0px;
+}
+
+.list-group-item {
+color: white;
+font-family: 'Nunito', sans-serif;
+
+}
+.form-control{
+    color: black;
+}
+
+
+
+.form-inline {
+    font-family: 'Nunito', sans-serif;
+
+}
+.btn.btn-outline-success {
+    border-color: currentColor;
+    color: white;
+    background-color: #34495E;
+    border: 3px solid black;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.card-body .container-fluid {
+    background: #fff !important;
+}
+
