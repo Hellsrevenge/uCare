@@ -21,7 +21,6 @@ export default function withAuth(AuthComponent) {
                 /* Try to get confirmation message from the Auth helper. */
                 try {
                     const confirm = Auth.getConfirm();
-                    
                     console.log("confirmation is:", confirm.email.split("@")[0]);
                     this.setState({
                         confirm: confirm,

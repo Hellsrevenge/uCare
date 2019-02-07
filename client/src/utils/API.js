@@ -21,7 +21,7 @@ export default {
     return axios.get("/api/search/");
   },
 
-  getAppts: function(){
+  getAppts: function(player){
     return axios.get("/api/appointments/");
   }
 

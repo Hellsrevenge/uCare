@@ -7,7 +7,6 @@ module.exports = function (app) {
 
     app.post("/api/patients/login", function (req, res) {
         const {email, password} = req.body;
-
         db.Patients.findOne({
             where: {
                 email: email
@@ -22,8 +21,9 @@ module.exports = function (app) {
                 if (user.validPassword(password)) {
                     // Issue token
                     const payload = {email};
+                    var dbPatient = user;
                     const token = jwt.sign(payload, secret, {expiresIn: '1h'});
-                    res.cookie('token', token, {httpOnly: true}).json({token: token});
+                    res.cookie('token', token, {httpOnly: true}).json({token: token, patient: dbPatient});
                 } else {
                     res.status(401).json({error: 'Incorrect email or password'});
                 }

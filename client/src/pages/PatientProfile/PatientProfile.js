@@ -16,11 +16,9 @@ const cardStyle =  {
     width:"600px"
 }
 
-
+var currPatient = Auth.player;
 
 const Auth = new AuthHelperMethods();
-
-var currPatient = "leo";
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -38,7 +36,6 @@ const currentmeds = {
 //   const testcontainer = { 
 //     display: "flex"
 //   }
-
 
 class PatientProfile extends Component {
 

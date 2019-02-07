@@ -1,5 +1,6 @@
 import decode from "jwt-decode";
 
+var player;
 export default class AuthHelperMethods {
 
     login = (email, password) => {
@@ -7,7 +8,9 @@ export default class AuthHelperMethods {
             method: 'POST',
             body: JSON.stringify({email, password})
         }).then(res => {
-            this.setToken(res.token); // Setting the token in localStorage
+            this.setToken(res.token, res.patient); // Setting the token in localStorage
+            player = res.patient;
+            console.log(player);
             return Promise.resolve(res);
         });
     };
@@ -50,6 +53,7 @@ export default class AuthHelperMethods {
     getConfirm = () => {
         // Using jwt-decode npm package to decode the token
         let answer = decode(this.getToken());
+        player = answer;
         console.log("Recieved answer!");
         return answer;
     };

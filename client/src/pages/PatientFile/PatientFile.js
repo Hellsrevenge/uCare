@@ -13,9 +13,7 @@ import Footer from "../../components/Footer/Footer";
 /*const Auth = new AuthHelperMethods();
 var currPatient = Auth.getConfirm().email.split("@")[0];*/
 
-
 function PatientFile (props) {
-  
 
     return (
 
