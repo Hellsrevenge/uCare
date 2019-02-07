@@ -1,15 +1,16 @@
 
-.card {
-    /* background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg"); */
+/* .card {
 
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    
+    margin: 0 auto; 
+    float: none;
+    margin-bottom: 10px; 
+    height: 600px;
     width: 1000px;
     
-}
+} */
+
 .container-fluid {
     background-color: royalblue;
     height:100%;
 }
+

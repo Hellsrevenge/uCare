@@ -52,7 +52,7 @@ function PatientFile (props) {
 
           <Col size="8">
 
-        <Card heading = {"Appointment History"}>
+        <Card heading = {"Patient ABC's File"}>
         <table className="table">
   <thead>
   <tr className="table-active">
