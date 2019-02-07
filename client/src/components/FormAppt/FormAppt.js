@@ -4,6 +4,7 @@ import Card from "../../components/Card/Card";
 import {Col, Row, Container} from "../../components/Grid/Grid";
 import CalendarAppt from "../../components/CalendarAppt/CalendarAppt"
 import { withRouter } from 'react-router';
+import AuthHelperMethods from "../AuthHelperMethods";
 
 
 const testcontainer = { 
@@ -12,9 +13,12 @@ const testcontainer = {
 
 
 class Form extends Component {
+    Auth = new AuthHelperMethods();
+
     constructor(props) {
         super(props);
         this.state = {
+            patient_id: this.Auth.getPatient().id,
             reason: "",
             type: "",
             doctor_id: "",
@@ -75,6 +79,7 @@ class Form extends Component {
             <div>
                 {/* <Container fluid style={testcontainer}> */}
                 <div className="card">
+                    <div className="card-header"><h2>New Appointment</h2></div>
                         <form className="form">
 
                             <input

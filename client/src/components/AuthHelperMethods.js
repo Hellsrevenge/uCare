@@ -1,17 +1,13 @@
 import decode from "jwt-decode";
 
-var player = "";
 export default class AuthHelperMethods {
-
-
     login = (email, password) => {
         return this.fetch('/api/patients/login', {
             method: 'POST',
             body: JSON.stringify({email, password})
         }).then(res => {
-            this.setToken(res.token, res.patient); // Setting the token in localStorage
-            player = res.patient;
-            console.log(player);
+            this.setToken(res.token);
+            this.setPatient(res.patient);
             return Promise.resolve(res);
         });
     };
@@ -19,8 +15,7 @@ export default class AuthHelperMethods {
     loggedIn = () => {
         // Checks if there is a saved token and it's still valid
         const token = this.getToken(); // Getting token from localstorage
-     
-        return !!token && !this.isTokenExpired(token); // handwaiving here
+        return !!token && !this.isTokenExpired(token);
     };
 
     isTokenExpired = token => {
@@ -34,6 +29,18 @@ export default class AuthHelperMethods {
             console.log("expired check failed! Line 42: AuthService.js");
             return false;
         }
+    };
+
+    setPatient = patient => {
+        localStorage.setItem("patient", JSON.stringify(patient));
+    };
+
+    getPatient = () => {
+        var patient = JSON.parse(localStorage.getItem("patient"));
+        if (!patient) {
+            console.log("no patient");
+        }
+        return patient;
     };
 
     setToken = idToken => {
@@ -54,7 +61,7 @@ export default class AuthHelperMethods {
     getConfirm = () => {
         // Using jwt-decode npm package to decode the token
         let answer = decode(this.getToken());
-        player = answer;
+        //player = answer;
         console.log("Recieved answer!");
         return answer;
     };

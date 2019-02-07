@@ -26,29 +26,41 @@ module.exports = function (app) {
     //displaying each appointment for a certain one
     app.get("/api/appointments/:id", isAuthenticated, function (req, res) {
         console.log(req.params.id)
-        const {user} = req.params.id;
-        db.Patients.findAll({
+        db.Appointments.findAll({
+            where: {
+                patientId: req.params.id
+            },
             include: [{
-                model: Appointments,
+                model: db.Doctors,
             }],
-            where: {firstName: user}
-        }).then(response => {
-            res.json(response);
+            order: [
+                ['date', 'DESC'],
+            ],
+        }).then(appointments => {
+            res.json(appointments);
         });
-        
+
+        // const {user} = req.params.id;
+        // db.Patients.findAll({
+        //     include: [{
+        //         model: db.Appointments,
+        //     }],
+        //     where: {patientId: req.params.id}
+        // }).then(response => {
+        //     res.json(response);
+        // });
     });
 
     app.post("/api/appointments", isAuthenticated, function (req, res) {
         skype.requestInterview(req.body.start, req.body.duration, function (result) {
             const skypeUrl = result.urls[0].url;
-
             db.Appointments.create({
                 subject: req.body.reason,
                 date: req.body.date,
                 duration: req.body.duration,
                 status: 1,
                 DoctorId: req.body.doctor_id,
-                PatientId: 1,
+                PatientId: req.body.patient_id,
                 skypeUrl: skypeUrl
             }).then(function (appointment) {
                 res.json({appointment: appointment})

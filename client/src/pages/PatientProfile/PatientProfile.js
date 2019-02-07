@@ -1,6 +1,7 @@
 import React, { Component} from "react";
+import Moment from 'react-moment';
+import { Col, Row, Container } from "../../components/Grid/Grid";
 import NavPatient from "../../components/NavPatient/NavPatient";
-import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
 import API from "../../utils/API"
 import AuthHelperMethods from "../../components/AuthHelperMethods";
@@ -14,10 +15,6 @@ const cardStyle =  {
     height:"400px",
     width:"600px"
 }
-
-const Auth = new AuthHelperMethods();
-const currPatient = "leo" // or [storedData].name 
-
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -37,6 +34,7 @@ const currentmeds = {
 //   }
 
 class PatientProfile extends Component {
+    Auth = new AuthHelperMethods();
 
     constructor(props) {
         super(props);
@@ -46,10 +44,11 @@ class PatientProfile extends Component {
     }
     
     componentDidMount() {
-        console.log(currPatient);
-        API.getAppts(currPatient)
+        console.log(this.Auth.getPatient());
+        API.getAppts(this.Auth.getPatient())
         .then(response => {
-            this.setState({appointments: response})
+            console.log(response);
+            this.setState({appointments: response.data})
         })
         // fetch("/api/appointments")
         //     .then(response => response.json())
@@ -64,22 +63,43 @@ class PatientProfile extends Component {
                 <NavPatient />
 
                     <Card heading= {"Appointments"}>
+                        <Container fluid>
+                            <Row className="row row-header">
+                                <Col size="2"><strong>Date</strong></Col>
+                                <Col size="3"><strong>Reason</strong></Col>
+                                <Col size="2"><strong>Duration</strong></Col>
+                                <Col size="2"><strong>Video Call Link</strong></Col>
+                                <Col size="2"><strong>Doctor</strong></Col>
+                            </Row>
                       {
                         this.state.appointments ? (
+
                             this.state.appointments.map((item, index) => {
                                 return (
-                                    <div key={index}>
-                                        {item.date} -
-                                        {item.subject} -
-                                        {item.status} -
-                                        {item.duration} -
-                                        <a href={item.skypeUrl}>{item.skypeUrl}</a> -
-                                        {item.DoctorId} -
-                                    </div>
+                                    <Row key={index} className="dark-nav">
+                                        <Col size="2">
+                                            <Moment format="LLLL">{item.date}</Moment>
+                                        </Col>
+                                        <Col size="3">
+                                            {item.subject}
+                                        </Col>
+                                        <Col size="2">
+                                            {item.duration}
+                                        </Col>
+                                        <Col size="2">
+                                            <a href={item.skypeUrl}>Call</a>
+                                        </Col>
+                                        <Col size="2">
+                                            {item.Doctor.firstName} {item.Doctor.lastName}, {item.Doctor.doctype}
+                                        </Col>
+
+                                    </Row>
+
                                 )
                             })
                         ) : null
                     }
+                        </Container>
                 </Card>
 
 
@@ -123,28 +143,6 @@ class PatientProfile extends Component {
                 <Card heading= {"Insurance & Billing"} >
                 <img id="insphoto" src={insimage} style={cardImage} alt ="insurance"/>
 
-                </Card>
-            
-
-
-
-                <Card heading= {"Other Data"}>
-                    {
-                        this.state.appointments ? (
-                            this.state.appointments.map((item, index) => {
-                                return (
-                                    <div key={index}>
-                                        {item.date} -
-                                        {item.subject} -
-                                        {item.status} -
-                                        {item.duration} -
-                                        <a href={item.skypeUrl}>{item.skypeUrl}</a> -
-                                        {item.DoctorId} -
-                                    </div>
-                                )
-                            })
-                        ) : null
-                    }
                 </Card>
                 
                 </div>

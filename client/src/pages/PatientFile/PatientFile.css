@@ -43,6 +43,7 @@ font-family: 'Nunito', sans-serif;
 
 }
 
-
-
+.card-body .container-fluid {
+    background: #fff !important;
+}
 
