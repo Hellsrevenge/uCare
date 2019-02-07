@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
-
+import API from "../../utils/API"
 import AuthHelperMethods from "../../components/AuthHelperMethods";
 
 import Card from "../../components/Card/Card";
@@ -11,8 +11,16 @@ import "./PatientProfile.css"
 
 //necessary for pulling patient name out of entered email
 
+const cardStyle =  {
+    height:"400px",
+    width:"600px"
+}
+
+
+
 const Auth = new AuthHelperMethods();
-var currPatient = Auth.getConfirm().email.split("@")[0];
+
+var currPatient = "leo";
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -27,9 +35,9 @@ const currentmeds = {
     height: "275px"
   }
 
-  const testcontainer = { 
-    display: "flex"
-  }
+//   const testcontainer = { 
+//     display: "flex"
+//   }
 
 
 class PatientProfile extends Component {
@@ -42,25 +50,29 @@ class PatientProfile extends Component {
     }
     
     componentDidMount() {
-        fetch("/api/appointments/" + currPatient)
-            .then(response => response.json())
-            .then(data => {
-                this.setState({appointments: data});
-            });
+        API.getAppts()
+        .then(response => {
+            this.setState({appointments: response})
+        })
+        // fetch("/api/appointments")
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         this.setState({appointments: data});
+        //     });
     }
+
+
+
+
+
 
     render() {
         return (
             <div>
+                <NavPatient />
 
-            <NavPatient />
-
-            <Container style={testcontainer}>
-
-
-                <Card heading= {"Appointments"}>
-                
-                    {
+                    <Card heading= {"Appointments"}>
+                      {
                         this.state.appointments ? (
                             this.state.appointments.map((item, index) => {
                                 return (
@@ -76,9 +88,10 @@ class PatientProfile extends Component {
                             })
                         ) : null
                     }
-                
                 </Card>
- 
+
+
+                
                 <Card heading= {"Prescription Medications"} >
 
             <table className="table table-hover">
@@ -113,11 +126,15 @@ class PatientProfile extends Component {
               </tbody>
             </table>
                 </Card>
-
+            
+            
                 <Card heading= {"Insurance & Billing"} >
                 <img id="insphoto" src={insimage} style={cardImage} alt ="insurance"/>
 
                 </Card>
+            
+
+
 
                 <Card heading= {"Other Data"}>
                     {
@@ -137,9 +154,10 @@ class PatientProfile extends Component {
                         ) : null
                     }
                 </Card>
+                
+                </div>
 
-            </Container>
-            </div>
+    
         )
     }
 }
