@@ -1,8 +1,34 @@
 # Getting Started -- uCare
 
-UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feauture to be present "live" during the appointments of your loved ones via video appointment option. 
+UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feature to be present "live" during the appointments of your loved ones via video appointment option. 
 
 ### User Stories
+
+User Schema
+![Image of User Schema Map](images/userSchema.png)
+
+Doctor Schema
+![Image of Doctor Schema Map](images/docSchema.png)
+
+###  How / Design Description
+
+## Code Base
+- Javascript
+- REACT
+- MySQL(Sequelize)
+- Express
+- Node
+- JSON
+- CSS
+
+## Supplementary Tech
+
+- Skype API for video meetings
+- Skype Chat
+- Passport authenticate
+- JSON Web Token
+
+## Features
 
 ![Image of Front View](images/front.png)
     
@@ -22,29 +48,6 @@ UCARE is a is a web based platform for patients and doctor to have a more well-r
     VIDEO CHAT
 
   ![Image of Video Chat](images/front.png)
-
-###  How / Design Description
-
-
-
-# Code Base
-- Javascript
-- REACT
-- MySQL(Sequelize)
-- Express
-- Node
-- JSON
-- CSS
-
-# Supplementary Tech
-
-- Skype API for video meetings
-- Skype Chat
-- Passport authenticate
-- JSON Web Token
-
-
-
 
 ### Future Development
 
