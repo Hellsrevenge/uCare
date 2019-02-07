@@ -11,7 +11,7 @@ body {
 
 .react-calendar {
   width: 802px;
-  height: 400px;
+  _height: 400px;
   max-width: 100%;
   background: white;
   border: 1px solid #a0a096;
