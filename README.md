@@ -43,7 +43,7 @@ Doctor Schema
 
     APPOINTMENTS
 
- ![Image of Appointments View](images/front.png)
+ ![Image of Appointments View](images/Appointments.png)
 
     VIDEO CHAT
 
@@ -53,9 +53,23 @@ Doctor Schema
 
     * Viewing as a Doctor
 
-    ![Image of Doctor View](https://octodex.github.com/images/yaktocat.png)
+    ![Image of Doctor View] (images/tempDocView.png)
 
     * Creating a new user with all medical information
+
+    * Family View
+
+     ![Image of Doctor View] (images/tempDocView.png)
+
+    - We hope to add a feature where certain people of your choosing can see your upcoming appointments/ and to a degree, your medical files
+
+## More Future Developments
+
+  - Proxies to include other doctors
+  - Saving past medical record for patient
+  - Saving doctor’s medical history
+  - A search bar for finding specific instances 
+
 
 
 ## Versioning
@@ -64,9 +78,6 @@ Doctor Schema
 ## Authors
   * Varvara Kourova, Amanda Murillo, Swechchha Parajuli
 
-
-## Authors
-* Amanda Murillo, Varvara Kourova, Swechchha Parajuli.
 
 # Demo
 Please follow the link to [Heroku]() deployment to play with the project.
