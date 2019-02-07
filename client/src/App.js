@@ -9,6 +9,12 @@ import NewAppt from "./pages/NewAppt/NewAppt";
 import PatientFile from "./pages/PatientFile/PatientFile";
 import Search from "./pages/SearchResults/SearchResults";
 
+import PatientTests from "./pages/PatientTests/PatientTests";
+import PatientMedications from "./pages/PatientMedications/PatientMedications";
+import PatientCalendar from "./pages/PatientCalendar/PatientCalendar";
+import PatientProxies from "./pages/PatientProxies/PatientProxies";
+
+
 function App() {
   return (
     <Router>
@@ -21,6 +27,11 @@ function App() {
           <Route exact path="/patient" component={PatientProfile} />
           <Route exact path="/newappt" component={NewAppt} />
           <Route exact path="/patient/:id" component={PatientFile} />
+            <Route exact path="/patient/:id/tests" component={PatientTests} />
+            <Route exact path="/patient/:id/medications" component={PatientMedications} />
+            <Route exact path="/patient/:id/calendar" component={PatientCalendar} />
+            <Route exact path="/patient/:id/proxies" component={PatientProxies} />
+            <Route exact path="/patient/:id/history" component={PatientFile} />
           <Route exact path="/search" component={Search} />
 
         </Switch>

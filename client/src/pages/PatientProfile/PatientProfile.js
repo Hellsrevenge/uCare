@@ -50,11 +50,6 @@ class PatientProfile extends Component {
             console.log(response);
             this.setState({appointments: response.data})
         })
-        // fetch("/api/appointments")
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         this.setState({appointments: data});
-        //     });
     }
 
     render() {
