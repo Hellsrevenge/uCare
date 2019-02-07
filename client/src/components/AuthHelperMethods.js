@@ -10,7 +10,7 @@ export default class AuthHelperMethods {
         }).then(res => {
             this.setToken(res.token, res.patient); // Setting the token in localStorage
             player = res.patient;
-            console.log(player);
+            //console.log(player);
             return Promise.resolve(res);
         });
     };

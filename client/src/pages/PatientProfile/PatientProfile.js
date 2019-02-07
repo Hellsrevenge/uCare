@@ -16,9 +16,8 @@ const cardStyle =  {
     width:"600px"
 }
 
-var currPatient = Auth.player;
-
-const Auth = new AuthHelperMethods();
+/*const Auth = new AuthHelperMethods();
+var currPatient = Auth.player;*/
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -57,11 +56,6 @@ class PatientProfile extends Component {
         //         this.setState({appointments: data});
         //     });
     }
-
-
-
-
-
 
     render() {
         return (
