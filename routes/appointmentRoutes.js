@@ -24,7 +24,17 @@ module.exports = function (app) {
 
     app.get("/api/appointments/:id", isAuthenticated, function (req, res) {
         console.log(req.params.id)
-        res.json([]);
+        const {user} = req.params.id;
+        db.Patients.findAll({
+            include: [{
+                model: Appointments,
+            }],
+            where: {firstName: user}
+        }).then(response => {
+            res.json(response);
+        });
+
+        
     });
 
     app.post("/api/appointments", isAuthenticated, function (req, res) {

@@ -4,7 +4,6 @@ import {Container} from "../../components/Grid/Grid";
 import withAuth from '../../components/withAuth';
 import API from "../../utils/API"
 import AuthHelperMethods from "../../components/AuthHelperMethods";
-
 import Card from "../../components/Card/Card";
 import insimage from "./ins2.png";
 import "./PatientProfile.css"
@@ -16,8 +15,9 @@ const cardStyle =  {
     width:"600px"
 }
 
-/*const Auth = new AuthHelperMethods();
-var currPatient = Auth.player;*/
+const Auth = new AuthHelperMethods();
+const currPatient = "leo" // or [storedData].name 
+
 
 const oldmeds = {
     background: "#fcfc9c"
@@ -46,7 +46,8 @@ class PatientProfile extends Component {
     }
     
     componentDidMount() {
-        API.getAppts()
+        console.log(currPatient);
+        API.getAppts(currPatient)
         .then(response => {
             this.setState({appointments: response})
         })

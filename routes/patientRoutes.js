@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 const secret = 'mysecretsshhh!';
 var db = require("../models");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
-
 module.exports = function (app) {
 
     app.post("/api/patients/login", function (req, res) {
@@ -73,14 +72,27 @@ module.exports = function (app) {
         db.Patients.findById(req.params.id).then(function (patient) {
             patient.password = null;
             res.json(patient);
+
+            /*
+        const {user} = req.params.id;
+        db.Patients.findAll({
+            where: {firstName: user}
+        }).then(response => {
+            res.json(response);
+        });
+            
+            */
         })
     });
 
-/*
+/* this is the routing for all patient files of a certain doctor
     app.get("/api/doctor/patients/:id", isAuthenticated, function (req, res) {
-        db.Patients.findAll({
+        db.Doctors.findAll({
             where: {
-                firstName: req.params.id
+                include: [{
+                    model: Patients,
+                }],
+                : req.params.id
             }
         })
     });*/
