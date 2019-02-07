@@ -33,7 +33,7 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "yarn build"
-  },,
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hellsrevenge/finalProject.git"
