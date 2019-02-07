@@ -1,15 +1,21 @@
 # Getting Started -- uCare
 
-UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feauture to be present "live" during the appointments of your loved ones via video appointment option. 
+UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feature to be present "live" during the appointments of your loved ones via video appointment option. 
 
 ### User Stories
-    The main objective of uCare is to provide a space for full scope healthcare. 
-    The intention of uCare is to let patients and doctor's have a space where they can communicate more effectively without having to always have an in-person meeting. 
+
+User Schema
+![Image of User Schema Map](images/userSchema.png)
+
+Doctor Schema
+![Image of Doctor Schema Map](images/docSchema.png)
+
+Initial Layout 
+   ![Image of Doctor View](images/tempWalk.png)
 
 ###  How / Design Description
 
-
-# Technologies Used
+## Code Base
 - Javascript
 - REACT
 - MySQL(Sequelize)
@@ -18,15 +24,56 @@ UCARE is a is a web based platform for patients and doctor to have a more well-r
 - JSON
 - CSS
 
-  * Functionality:
+## Supplementary Tech
 
+- Skype API for video meetings
+- Skype Chat
+- Passport authenticate
+- JSON Web Token
 
+## Features
+
+![Image of Front View](images/front.png)
+    
+    CALENDAR
+ ![Image of Calendar View](images/front.png)
+
+    MEDICATIONS
+ ![Image of Medication View](images/front.png)
+
+    PATIENT FILES
+ ![Image of Patient Files View](images/front.png)
+
+    APPOINTMENTS
+
+ ![Image of Appointments View](images/Appointments.png)
+
+    VIDEO CHAT
+
+  ![Image of Video Chat](images/front.png)
 
 ### Future Development
 
-    * Multiple doctors for ONE Patient
-    * Doctor view 
+    * Viewing as a Doctor
+
+    ![Image of Doctor View](images/tempDocView.png)
+
+       ![Image of Doctor View Patient Files](images/tempPatientFiles.png)
+
     * Creating a new user with all medical information
+
+    * Family View
+
+     ![Image of Doctor View](images/tempDocView.png)
+
+    - We hope to add a feature where certain people of your choosing can see your upcoming appointments/ and to a degree, your medical files
+
+## More Future Developments
+
+  - Proxies to include other doctors
+  - Saving past medical record for patient
+  - Saving doctor’s medical history
+  - A search bar for finding specific instances 
 
 ## Versioning
   * For the versions available, see the tags on this repository.
@@ -34,9 +81,6 @@ UCARE is a is a web based platform for patients and doctor to have a more well-r
 ## Authors
   * Varvara Kourova, Amanda Murillo, Swechchha Parajuli
 
-
-## Authors
-* Amanda Murillo, Varvara Kourova, Swechchha Parajuli.
 
 # Demo
 Please follow the link to [Heroku]() deployment to play with the project.
