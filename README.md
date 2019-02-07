@@ -10,6 +10,9 @@ User Schema
 Doctor Schema
 ![Image of Doctor Schema Map](images/docSchema.png)
 
+Initial Layout 
+   ![Image of Doctor View](images/tempWalk.png)
+
 ###  How / Design Description
 
 ## Code Base
@@ -53,13 +56,15 @@ Doctor Schema
 
     * Viewing as a Doctor
 
-    ![Image of Doctor View] (images/tempDocView.png)
+    ![Image of Doctor View](images/tempDocView.png)
+
+       ![Image of Doctor View Patient Files](images/tempPatientFiles.png)
 
     * Creating a new user with all medical information
 
     * Family View
 
-     ![Image of Doctor View] (images/tempDocView.png)
+     ![Image of Doctor View](images/tempDocView.png)
 
     - We hope to add a feature where certain people of your choosing can see your upcoming appointments/ and to a degree, your medical files
 
@@ -69,8 +74,6 @@ Doctor Schema
   - Saving past medical record for patient
   - Saving doctor’s medical history
   - A search bar for finding specific instances 
-
-
 
 ## Versioning
   * For the versions available, see the tags on this repository.
