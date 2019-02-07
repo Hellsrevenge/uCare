@@ -4,7 +4,7 @@
 
 .form input {
   display: block;
-  margin-top: 5px;
+  _margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
 
@@ -44,7 +44,7 @@ select[name^=doctor] {
 
 .cardnewappt {
   height:600px;
-  
+
     /* background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg"); */
 
     margin: 0 auto; /* Added */
@@ -53,10 +53,14 @@ select[name^=doctor] {
     height:470px;
     width: 800px;
 
-    
-    /* width: 1000px;
-    
-    height: 1000px; */
-    
 
+    /* width: 1000px;
+
+    height: 1000px; */
+
+
+}
+
+.form .row {
+    padding: 12px;
 }

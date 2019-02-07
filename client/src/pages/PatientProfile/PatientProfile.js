@@ -87,7 +87,7 @@ class PatientProfile extends Component {
                                             {item.duration}
                                         </Col>
                                         <Col size="2">
-                                            <a href={item.skypeUrl}>Call</a>
+                                            <a href={item.skypeUrl} target="_blank">Call</a>
                                         </Col>
                                         <Col size="2">
                                             {item.Doctor.firstName} {item.Doctor.lastName}, {item.Doctor.doctype}
