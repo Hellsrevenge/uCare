@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { Col, Row, Container } from "../../components/Grid/Grid";
 import NavHome from "../../components/NavHome/NavHome";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import home from "./case3.png";
 import "./Home.css"
 
@@ -33,9 +33,13 @@ class Home extends Component {
 
        </Container>
 
-       <Footer />
-
-       </div>
+       {/* <Footer /> */}
+       <footer className="page-footer font-small blue">
+          <div className="footer-copyright text-center py-3">© 2018 UCARE
+            {/* <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a> */}
+          </div>
+        </footer>   
+    </div>
     );
   }
 }

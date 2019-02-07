@@ -12,7 +12,7 @@ class NavPatient extends Component {
     render() {
         return (
             <div>
-            <nav className="navbar sticky-top navbar-expand-lg ">
+            <nav className="navbar sticky-top navbar-expand-lg">
             
             <img className ="homeimg rounded-circle" src= {logo}></img>
                 <a className="navbar-brand" href="/">
@@ -28,10 +28,10 @@ class NavPatient extends Component {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto" style={navItem}>
       <li className="nav-item active">
-        <a className="nav-link" href="/patientlist">Patient Files <span className="sr-only">(current)</span></a>
+        <a className="nav-link" href="/patient/:id">Patient File<span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
+        <a className="nav-link" href="/newappt">New Appointment</a>
       </li>
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
