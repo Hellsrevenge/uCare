@@ -73,10 +73,9 @@ class Form extends Component {
     render() {
         return (
             <div>
-                {/* <Container fluid style={testcontainer}> */}
+                <Container fluid style={testcontainer}>
                 <div className="card">
                         <form className="form">
-
                             <input
                                 value={this.state.reason}
                                 name="reason"
@@ -89,37 +88,39 @@ class Form extends Component {
                             <CalendarAppt onChange={this.calendarChange}/>
 
                                 <div className="form-group">
-                                    <label htmlFor="exampleFormControlFile1">Upload your files here</label>
+                                <header>Please upload any relevant files or images </header>
+                                    {/* <label htmlFor="exampleFormControlFile1">Please upload any relevant files or images</label> */}
                                     <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
                                 </div>
                             {/* </Row> */}
 
                             {/* <Row> */}
                                 {/* <Col size="6"> */}
+                                <label for="video">Video Appointment</label><br></br>
                                     <input
                                         onChange={this.handleselectedOption}
                                         type="radio"
                                         value="video"
-                                        name="type"
+                                        name="video"
                                         checked={this.state.type === "video"}
-                                    /> Video Appointment
+                                    /> 
                                 {/* </Col> */}
 
                                 {/* <Col size="6"> */}
+                                <label for="inperson">In person Appointment</label><br></br>
                                     <input
                                         onChange={this.handleselectedOption}
                                         type="radio"
                                         value="inperson"
-                                        name="type"
+                                        name="inperson"
                                         checked={this.state.type === "inperson"}
                                     />
-                                    In-person Appointment
                                 {/* </Col> */}
                             {/* </Row> */}
-
+<br></br>
                             {/* <Row> */}
                                 {/* <Col size="4"> */}
-                                    <select onChange={this.handleDoctorOption}>
+                                    <select name="doctor" onChange={this.handleDoctorOption}>
                                         <option>Select Doctor</option>
                                         {
                                             this.props.doctors ? (
@@ -136,7 +137,7 @@ class Form extends Component {
 
                                 {/* <Col size="8"> */}
                                     <div>
-                                        <select onChange={this.handleDurationOption}>
+                                        <select name="duration" onChange={this.handleDurationOption}>
                                             <option value="30">Select duration</option>
                                             <option value="30">30 min</option>
                                             <option value="45">45 min</option>
@@ -150,7 +151,7 @@ class Form extends Component {
                             <button onClick={this.handleFormSubmit}>Submit</button>
                         </form>
                         </div>
-                {/* </Container> */}
+                </Container>
             </div>
 
         );

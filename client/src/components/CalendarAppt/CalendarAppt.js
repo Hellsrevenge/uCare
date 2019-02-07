@@ -18,15 +18,15 @@ class CalendarAppt extends Component {
     return (
       <div className="Sample">
         <header>
-          <h1>Calendar</h1>
+          Please select a date and time 
         </header>
         <div className="Sample__container">
-          <main className="Sample__container__content">
+          {/* <main className="Sample__container__content"> */}
             <DateTimePicker
               onChange={this.onChange}
               value={value}
             />
-          </main>
+          {/* </main> */}
         </div>
       </div>
     );

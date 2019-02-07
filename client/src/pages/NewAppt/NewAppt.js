@@ -7,10 +7,6 @@ import "./NewAppt.css";
 import Footer from "../../components/Footer/Footer"
 
 
-const testcontainer = { 
-    display: "flex",
-    height:"100%",
-  }
 
 class NewAppt extends Component {
     constructor(props) {
@@ -33,7 +29,7 @@ class NewAppt extends Component {
             <div>
             <NavHome/>
 
-                <Container fluid style={testcontainer}>
+                <Container fluid>
                     <FormAppt doctors={this.state.doctors}/>
                 </Container>
                 <Footer />

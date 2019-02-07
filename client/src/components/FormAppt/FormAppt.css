@@ -7,11 +7,56 @@
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
+
+    height: 36px;
+    border-right-width: 5px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+
 }
+
+.options {
+  width: 300px;
+}
+
+
+
 
 /* .container{
   height: 400px;
   width: 630px;
 } */
+.select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+select[name^=duration] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+select[name^=doctor] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 
+.cardnewappt {
+  height:600px;
+  
+    /* background-image: url("./clipboard-with-blank-paper-simple-template-vector-20402601.jpg"); */
+
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    height:470px;
+    width: 800px;
+
+    
+    /* width: 1000px;
+    
+    height: 1000px; */
+    
+
+}
