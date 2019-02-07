@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         });
 
+        
         PatDoc.belongsTo(models.Doctors, {
             foreignKey: {
                 allowNull: false

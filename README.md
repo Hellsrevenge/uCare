@@ -1,3 +1,5 @@
+
+
 # UCARE
 UCARE is a is a web based platform for patients and doctor to have a more well-rounded, transparent healthcare experience.The main purpose of this application is to give people a space where they can be updated on their families’ health issues as well as have their entire medical history in one space for themselves and all medical professionals with access to view, including the feauture to be present "live" during the appointments of your loved ones via video appointment option. 
 

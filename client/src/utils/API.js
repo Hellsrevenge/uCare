@@ -21,8 +21,9 @@ export default {
     return axios.get("/api/search/");
   },
 
+  // route for returning json of player's appointments
   getAppts: function(player){
-    return axios.get("/api/appointments/");
+    return axios.get("/api/appointments/"+ player);
   }
 
 };

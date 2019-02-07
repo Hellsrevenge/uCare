@@ -19,12 +19,14 @@ module.exports = (sequelize, DataTypes) => {
         Appointments.belongsTo(models.Patients, {
             foreignKey: {
                 allowNull: false
-            }
+            },
+            onDelete: "cascade"
         });
         Appointments.belongsTo(models.Doctors, {
             foreignKey: {
                 allowNull: false
-            }
+            },
+            onDelete: "cascade"
         });
     };
     return Appointments;

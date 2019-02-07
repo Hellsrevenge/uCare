@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Doctors.associate = function (models) {
         // associations can be defined here
+        Doctors.hasMany(models.Patients,{
+            onDelete: "cascade"
+        })
     };
     return Doctors;
 };
