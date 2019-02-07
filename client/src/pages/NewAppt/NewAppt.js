@@ -4,8 +4,13 @@ import NavHome from "../../components/NavHome/NavHome";
 import FormAppt from "../../components/FormAppt/FormAppt";
 import withAuth from '../../components/withAuth';
 import "./NewAppt.css";
+import Footer from "../../components/Footer/Footer"
 
 
+const testcontainer = { 
+    display: "flex",
+    height:"100%",
+  }
 
 class NewAppt extends Component {
     constructor(props) {
@@ -28,9 +33,11 @@ class NewAppt extends Component {
             <div>
             <NavHome/>
 
-                <Container fluid>
+                <Container fluid style={testcontainer}>
                     <FormAppt doctors={this.state.doctors}/>
                 </Container>
+                <Footer />
+
             </div>
         )
     }

@@ -1,3 +1,18 @@
-/* .oldmeds {
-    background: yellow;
-} */
+.flex-grid {
+    display: flex;
+    height:400px;
+    width: 600px;
+  }
+  .col {
+    flex: 2;
+  }
+
+  .container {
+    display:  inline-flex ;
+    flex-wrap: wrap;
+  }
+
+  .card {
+      height:400px;
+      width:600px;
+  }

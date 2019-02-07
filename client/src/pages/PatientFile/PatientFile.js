@@ -6,7 +6,7 @@ import {Component} from "react";
 import NavPatient from "../../components/NavPatient/NavPatient";
 import "./PatientFile.css";
 import AuthHelperMethods from "../../components/AuthHelperMethods";
-
+import Footer from "../../components/Footer/Footer";
 //import API from "../utils/API";
 
 //necessary for pulling patient name out of entered email
@@ -22,15 +22,15 @@ function PatientFile (props) {
     
     <Container fluid>
       <Row>
-         <Col size ="4">
+         <Col size ="2">
             <Row>
               <Col size ="4">
-              <a className="list-group-item" href="#"><i className="fas fa-vials fa-3x" aria-hidden="true"></i>&nbsp;Tests</a>
+              <a className="list-group-item" href="#"><i className="fas fa-vials fa-2x" aria-hidden="true"></i>&nbsp;Tests</a>
               </Col>
             </Row>
             <Row>
               <Col size ="4">
-              <a className="list-group-item" href="#"><i className="fas fa-prescription fa-3x" aria-hidden="true"></i>&nbsp;Medications</a>
+              <a className="list-group-item" href="#"><i className="fas fa-prescription fa-2x" aria-hidden="true"></i>&nbsp;Medications</a>
               </Col>
             </Row>
             <Row>
@@ -49,6 +49,9 @@ function PatientFile (props) {
               </Col>
             </Row>
           </Col>
+
+          <Col size="8">
+
         <Card heading = {"Appointment History"}>
         <table className="table">
   <thead>
@@ -99,11 +102,12 @@ function PatientFile (props) {
   </tbody>
 </table>
        </Card>
+       </Col>
        </Row>
         </Container>
-   
-       
 
+        <Footer />
+       
       </div>
       
     );

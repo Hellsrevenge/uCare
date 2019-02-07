@@ -5,6 +5,12 @@ import {Col, Row, Container} from "../../components/Grid/Grid";
 import CalendarAppt from "../../components/CalendarAppt/CalendarAppt"
 import { withRouter } from 'react-router';
 
+
+const testcontainer = { 
+    display: "flex"
+  }
+
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -67,86 +73,84 @@ class Form extends Component {
     render() {
         return (
             <div>
-                <Card>
-                    <p>
-                        Appointment for {this.state.patient}
-                    </p>
+                {/* <Container fluid style={testcontainer}> */}
+                <div className="card">
+                        <form className="form">
 
-                    <form className="form">
+                            <input
+                                value={this.state.reason}
+                                name="reason"
+                                onChange={this.handleInputChange}
+                                type="text"
+                                placeholder="Reason for this appointment"
+                            />
 
-                        <input
-                            value={this.state.reason}
-                            name="reason"
-                            onChange={this.handleInputChange}
-                            type="text"
-                            placeholder="Reason for this appointment"
-                        />
+                            {/* <Row> */}
+                            <CalendarAppt onChange={this.calendarChange}/>
 
-                        <Row>
-                        <CalendarAppt onChange={this.calendarChange}/>
-
-                            <div className="form-group">
-                                <label htmlFor="exampleFormControlFile1">Upload your files here</label>
-                                <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
-                            </div>
-                        </Row>
-
-                        <Row>
-                            <Col size="6">
-                                <input
-                                    onChange={this.handleselectedOption}
-                                    type="radio"
-                                    value="video"
-                                    name="type"
-                                    checked={this.state.type === "video"}
-                                /> Video Appointment
-                            </Col>
-
-                            <Col size="6">
-                                <input
-                                    onChange={this.handleselectedOption}
-                                    type="radio"
-                                    value="inperson"
-                                    name="type"
-                                    checked={this.state.type === "inperson"}
-                                />
-                                In-person Appointment
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col size="4">
-                                <select onChange={this.handleDoctorOption}>
-                                    <option>Select Doctor</option>
-                                    {
-                                        this.props.doctors ? (
-                                            this.props.doctors.map((item, index) => {
-                                                return (
-                                                    <option key={index}
-                                                            value={item.id}>{item.firstName} {item.lastName} - {item.doctype}</option>
-                                                )
-                                            })
-                                        ) : null
-                                    }
-                                </select>
-                            </Col>
-
-                            <Col size="8">
-                                <div>
-                                    <select onChange={this.handleDurationOption}>
-                                        <option value="30">Select duration</option>
-                                        <option value="30">30 min</option>
-                                        <option value="45">45 min</option>
-                                        <option value="60">60 min</option>
-                                    </select>
+                                <div className="form-group">
+                                    <label htmlFor="exampleFormControlFile1">Upload your files here</label>
+                                    <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
                                 </div>
-                            </Col>
+                            {/* </Row> */}
 
-                        </Row>
+                            {/* <Row> */}
+                                {/* <Col size="6"> */}
+                                    <input
+                                        onChange={this.handleselectedOption}
+                                        type="radio"
+                                        value="video"
+                                        name="type"
+                                        checked={this.state.type === "video"}
+                                    /> Video Appointment
+                                {/* </Col> */}
 
-                        <button onClick={this.handleFormSubmit}>Submit</button>
-                    </form>
-                </Card>
+                                {/* <Col size="6"> */}
+                                    <input
+                                        onChange={this.handleselectedOption}
+                                        type="radio"
+                                        value="inperson"
+                                        name="type"
+                                        checked={this.state.type === "inperson"}
+                                    />
+                                    In-person Appointment
+                                {/* </Col> */}
+                            {/* </Row> */}
+
+                            {/* <Row> */}
+                                {/* <Col size="4"> */}
+                                    <select onChange={this.handleDoctorOption}>
+                                        <option>Select Doctor</option>
+                                        {
+                                            this.props.doctors ? (
+                                                this.props.doctors.map((item, index) => {
+                                                    return (
+                                                        <option key={index}
+                                                                value={item.id}>{item.firstName} {item.lastName} - {item.doctype}</option>
+                                                    )
+                                                })
+                                            ) : null
+                                        }
+                                    </select>
+                                {/* </Col> */}
+
+                                {/* <Col size="8"> */}
+                                    <div>
+                                        <select onChange={this.handleDurationOption}>
+                                            <option value="30">Select duration</option>
+                                            <option value="30">30 min</option>
+                                            <option value="45">45 min</option>
+                                            <option value="60">60 min</option>
+                                        </select>
+                                    </div>
+                                {/* </Col> */}
+
+                            {/* </Row> */}
+
+                            <button onClick={this.handleFormSubmit}>Submit</button>
+                        </form>
+                        </div>
+                {/* </Container> */}
             </div>
 
         );

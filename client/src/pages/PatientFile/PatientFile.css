@@ -6,11 +6,17 @@
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+    height:450px;
     
-    width: 1000px;
+    /* width: 1000px;
     
-        height: 500px;
+    height: 1000px; */
     
+}
+
+.col-2 {
+    margin-left: 10px;
+    padding-right: 0px;
 }
 
 .list-group-item {
@@ -36,4 +42,7 @@ font-family: 'Nunito', sans-serif;
     font-family: 'Nunito', sans-serif;
 
 }
+
+
+
 
