@@ -72,7 +72,6 @@ module.exports = function (app) {
         db.Patients.findById(req.params.id).then(function (patient) {
             patient.password = null;
             res.json(patient);
-
             /*
         const {user} = req.params.id;
         db.Patients.findAll({
@@ -80,7 +79,6 @@ module.exports = function (app) {
         }).then(response => {
             res.json(response);
         });
-            
             */
         })
     });
