@@ -77,54 +77,55 @@ class Form extends Component {
     render() {
         return (
             <div>
-                {/* <Container fluid style={testcontainer}> */}
-                <div className="card">
+                <div className="card text-center">
                     <div className="card-header"><h2>New Appointment</h2></div>
-                        <form className="form">
+                    <div className="card-body text-left">
+                        <Container fluid>
+                            <form className="form">
 
-                            <input
-                                value={this.state.reason}
-                                name="reason"
-                                onChange={this.handleInputChange}
-                                type="text"
-                                placeholder="Reason for this appointment"
-                            />
+                            <Row>
+                                <Col size="3">Reason</Col>
+                                <Col size="8"><input
+                                    value={this.state.reason}
+                                    name="reason"
+                                    onChange={this.handleInputChange}
+                                    type="text"
+                                    placeholder="Reason for this appointment"
+                                /></Col>
+                            </Row>
 
-                            {/* <Row> */}
-                            <CalendarAppt onChange={this.calendarChange}/>
+                                <Row>
+                                    <Col size="3">Select a date and time</Col>
+                                    <Col size="8"><CalendarAppt onChange={this.calendarChange}/></Col>
+                                </Row>
+                                <Row>
+                                    <Col size="3">Upload your files here</Col>
+                                    <Col size="8"><input type="file" className="form-control-file" id="exampleFormControlFile1"/></Col>
+                                </Row>
+                                {/*<Row>*/}
+                                    {/*<Col size="3">Video Appointment</Col>*/}
+                                    {/*<Col size="8"><input*/}
+                                        {/*onChange={this.handleselectedOption}*/}
+                                        {/*type="radio"*/}
+                                        {/*value="video"*/}
+                                        {/*name="type"*/}
+                                        {/*checked={this.state.type === "video"}*/}
+                                    {/*/></Col>*/}
+                                {/*</Row>*/}
 
-                                <div className="form-group">
-                                    <label htmlFor="exampleFormControlFile1">Upload your files here</label>
-                                    <input type="file" className="form-control-file" id="exampleFormControlFile1"/>
-                                </div>
-                            {/* </Row> */}
-
-                            {/* <Row> */}
-                                {/* <Col size="6"> */}
-                                    <input
-                                        onChange={this.handleselectedOption}
-                                        type="radio"
-                                        value="video"
-                                        name="type"
-                                        checked={this.state.type === "video"}
-                                    /> Video Appointment
-                                {/* </Col> */}
-
-                                {/* <Col size="6"> */}
-                                    <input
-                                        onChange={this.handleselectedOption}
-                                        type="radio"
-                                        value="inperson"
-                                        name="type"
-                                        checked={this.state.type === "inperson"}
-                                    />
-                                    In-person Appointment
-                                {/* </Col> */}
-                            {/* </Row> */}
-
-                            {/* <Row> */}
-                                {/* <Col size="4"> */}
-                                    <select onChange={this.handleDoctorOption}>
+                                {/*<Row>*/}
+                                    {/*<Col size="3">In-person Appointment</Col>*/}
+                                    {/*<Col size="8"><input*/}
+                                        {/*onChange={this.handleselectedOption}*/}
+                                        {/*type="radio"*/}
+                                        {/*value="inperson"*/}
+                                        {/*name="type"*/}
+                                        {/*checked={this.state.type === "inperson"}*/}
+                                    {/*/></Col>*/}
+                                {/*</Row>*/}
+                                <Row>
+                                    <Col size="3">Select a doctor</Col>
+                                    <Col size="8"><select onChange={this.handleDoctorOption}>
                                         <option>Select Doctor</option>
                                         {
                                             this.props.doctors ? (
@@ -136,26 +137,27 @@ class Form extends Component {
                                                 })
                                             ) : null
                                         }
-                                    </select>
-                                {/* </Col> */}
-
-                                {/* <Col size="8"> */}
-                                    <div>
+                                    </select></Col>
+                                </Row>
+                                <Row>
+                                    <Col size="3">Duration</Col>
+                                    <Col size="8">
                                         <select onChange={this.handleDurationOption}>
-                                            <option value="30">Select duration</option>
-                                            <option value="30">30 min</option>
-                                            <option value="45">45 min</option>
-                                            <option value="60">60 min</option>
-                                        </select>
-                                    </div>
-                                {/* </Col> */}
-
-                            {/* </Row> */}
-
-                            <button onClick={this.handleFormSubmit}>Submit</button>
+                                        <option value="30">Select duration</option>
+                                        <option value="30">30 min</option>
+                                        <option value="45">45 min</option>
+                                        <option value="60">60 min</option>
+                                    </select>
+                                    </Col>
+                                </Row>
+                                <div className="text-center">
+                                    <button className="btn-primary" onClick={this.handleFormSubmit}>Submit</button>
+                                </div>
                         </form>
-                        </div>
+                        </Container>
+                    </div>
                 {/* </Container> */}
+                </div>
             </div>
 
         );

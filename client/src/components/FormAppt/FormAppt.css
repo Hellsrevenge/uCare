@@ -4,7 +4,7 @@
 
 .form input {
   display: block;
-  margin-top: 5px;
+  _margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
 }
@@ -15,3 +15,6 @@
 } */
 
 
+.form .row {
+  padding: 12px;
+}

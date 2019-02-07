@@ -17,9 +17,6 @@ class CalendarAppt extends Component {
 
     return (
       <div className="Sample">
-        <header>
-          <h1>Calendar</h1>
-        </header>
         <div className="Sample__container">
           <main className="Sample__container__content">
             <DateTimePicker
