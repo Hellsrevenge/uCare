@@ -11,7 +11,7 @@ Doctor Schema
 ![Image of Doctor Schema Map](images/docSchema.png)
 
 Initial Layout 
-   ![Image of Doctor View](images/tempWalk.png)
+![Image of Doctor View](images/tempWalk.png)
 
 ###  How / Design Description
 
@@ -33,54 +33,29 @@ Initial Layout
 
 ## Features
 
-![Image of Front View](images/front.png)
-    
-    CALENDAR
- ![Image of Calendar View](images/front.png)
+![](images/1.png) 
 
-    MEDICATIONS
- ![Image of Medication View](images/front.png)
+![](images/2.png) 
 
-    PATIENT FILES
- ![Image of Patient Files View](images/front.png)
+![](images/3.png) 
 
-    APPOINTMENTS
+![](images/4.png)
 
- ![Image of Appointments View](images/Appointments.png)
+![](images/5.png) 
 
-    VIDEO CHAT
+![](images/6.png) 
 
-  ![Image of Video Chat](images/front.png)
+![](images/7.png) 
 
-### Future Development
-
-    * Viewing as a Doctor
-
-    ![Image of Doctor View](images/tempDocView.png)
-
-       ![Image of Doctor View Patient Files](images/tempPatientFiles.png)
-
-    * Creating a new user with all medical information
-
-    * Family View
-
-     ![Image of Doctor View](images/tempDocView.png)
-
-    - We hope to add a feature where certain people of your choosing can see your upcoming appointments/ and to a degree, your medical files
-
-## More Future Developments
+## Future Developments
 
   - Proxies to include other doctors
   - Saving past medical record for patient
   - Saving doctor’s medical history
   - A search bar for finding specific instances 
 
-## Versioning
-  * For the versions available, see the tags on this repository.
-
 ## Authors
   * Varvara Kourova, Amanda Murillo, Swechchha Parajuli
-
 
 # Demo
 Please follow the link to [Heroku]() deployment to play with the project.
