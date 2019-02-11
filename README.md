@@ -28,8 +28,7 @@ Initial Layout
 
 - Skype API for video meetings
 - Skype Chat
-- Passport authenticate
-- JSON Web Token
+- JSON Web Token for Authentication 
 
 ## Features
 
