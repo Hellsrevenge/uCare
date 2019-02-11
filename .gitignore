@@ -23,4 +23,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea
-_yarn.lock
