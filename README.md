@@ -33,19 +33,19 @@ Initial Layout
 
 ## Features
 
-![](images/1.png) 
+![](client/public/images/1.png) 
 
-![](images/2.png) 
+![](client/public/images/2.png) 
 
-![](images/3.png) 
+![](client/public/images/3.png) 
 
-![](images/4.png)
+![](client/public/images/4.png)
 
-![](images/5.png) 
+![](client/public/images/5.png) 
 
-![](images/6.png) 
+![](client/public/images/6.png) 
 
-![](images/7.png) 
+![](client/public/images/7.png) 
 
 ## Future Developments
 
