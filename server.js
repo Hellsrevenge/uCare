@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(__dirname));
 
+require("./routes/patientRoutes")(app);
+require("./routes/appointmentRoutes")(app);
+
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
     app.get("/*", function(req, res) {
@@ -21,9 +24,6 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.join(__dirname, "./client/public/index.html"));
     });
 }
-
-require("./routes/patientRoutes")(app);
-require("./routes/appointmentRoutes")(app);
 
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
