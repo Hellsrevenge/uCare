@@ -4,7 +4,7 @@
   "description": "GENERAL DISCLAIMER AND LIMITATION OF LIABILITY",
   "main": "server.js",
   "engines": {
-    "node": ">=11.1.0"
+    "node": "11.x"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
