@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "GENERAL DISCLAIMER AND LIMITATION OF LIABILITY",
   "main": "server.js",
+  "engines": {
+    "node": ">=0.12",
+  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bcrypt-pbkdf": "^1.0.2",
