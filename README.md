@@ -57,7 +57,7 @@ Initial Layout
   * Varvara Kourova, Amanda Murillo, Swechchha Parajuli
 
 # Demo
-Please follow the link to [Heroku]() deployment to play with the project.
+Please follow the link to [Heroku](https://ucare2019.herokuapp.com/) deployment to play with the project.
 
 # License
 
