@@ -3,18 +3,24 @@
   "version": "1.0.0",
   "description": "GENERAL DISCLAIMER AND LIMITATION OF LIABILITY",
   "main": "server.js",
+  "engines": {
+    "node": "11.x"
+  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bcrypt-pbkdf": "^1.0.2",
     "cookie-parser": "^1.4.3",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "guid": "0.0.12",
+    "if-env": "^1.0.4",
     "jsonwebtoken": "^8.4.0",
     "mysql2": "^1.6.4",
     "node-fetch": "^2.3.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "react-moment": "^0.8.4",
     "sequelize": "^4.42.0",
     "sequelize-cli": "^5.4.0",
@@ -41,6 +47,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hellsrevenge/finalProject/issues"
-  },
-  "homepage": "https://github.com/Hellsrevenge/finalProject#readme"
+  }
 }
