@@ -57,7 +57,7 @@ Initial Layout
   * Varvara Kourova, Amanda Murillo, Swechchha Parajuli
 
 # Demo
-Please follow the link to [Heroku](https://ucare2019.herokuapp.com/) deployment to play with the project.
+Please follow the link to [Heroku](https://ucare2019.herokuapp.com/) deployment to play with the project. To login use leo@ucare.dev as login email and 12345 as a password.
 
 # License
 
